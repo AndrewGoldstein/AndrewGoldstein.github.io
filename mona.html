@@ -32,15 +32,16 @@
   }     
    
 
-var str = ['M7lc1UVf-VE','Skr4CqKWA0g','M7lc1UVf-VE','qz6-ScWea_I','M7lc1UVf-VE','M7lc1UVf-VE']
-
+var str = ['M7lc1UVf-VE','Skr4CqKWA0g','M7lc1UVf-VE','qz6-ScWea_I','M7lc1UVf-VE','hF89aQhAOKI']
+var st = [4,6,6,8,8]
+var end = [11,13,13,15,15]
 
     // when video ends
         function onPlayerStateChange(event) {  
 
                     if(event.data === YT.PlayerState.ENDED) { 
                 
-                player.loadVideoById({videoId: str[i], startSeconds:4,  endSeconds:12})
+                player.loadVideoById({videoId: str[i], startSeconds:st[i],  endSeconds:end[i]})
                           i = i +1;
 
             }
