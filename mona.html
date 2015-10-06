@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <body>
+  <div id="ytplayer"></div>
+
+<script>
+  // Load the IFrame Player API code asynchronously.
+  var i = 0
+  var tag = document.createElement('script');
+  tag.src = "https://www.youtube.com/player_api";
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+  // Replace the 'ytplayer' element with an <iframe> and
+  // YouTube player after the API code downloads.
+  var player;
+  function onYouTubePlayerAPIReady() {
+    player = new YT.Player('ytplayer', {
+      height: '390',
+      width: '640',
+      videoId: 'ij7oUPj-FJU',
+      playerVars : {
+             'autoplay': 1,
+             'start':462,
+             'end':469
+      },
+       events: {
+                'onStateChange': onPlayerStateChange
+              }
+       
+    });
+  }     
+   
+
+var str = ['M7lc1UVf-VE','Skr4CqKWA0g','M7lc1UVf-VE','qz6-ScWea_I','M7lc1UVf-VE','M7lc1UVf-VE']
+
+
+    // when video ends
+        function onPlayerStateChange(event) {  
+
+                    if(event.data === YT.PlayerState.ENDED) { 
+                
+                player.loadVideoById({videoId: str[i], startSeconds:4,  endSeconds:12})
+                          i = i +1;
+
+            }
+        }
+    
+</script>
+    
+      </body>
+</html>
+    
+
+       
