@@ -5,7 +5,7 @@
 
 <script>
   // Load the IFrame Player API code asynchronously.
-  var i = 0
+  var i = 0;
   var tag = document.createElement('script');
   tag.src = "https://www.youtube.com/player_api";
   var firstScriptTag = document.getElementsByTagName('script')[0];
@@ -32,17 +32,17 @@
   }     
    
 
-var str = ['M7lc1UVf-VE','Skr4CqKWA0g','M7lc1UVf-VE','qz6-ScWea_I','M7lc1UVf-VE','hF89aQhAOKI']
-var st = [4,4,4,7,7,8,8]
-var end = [12,12,12,15,15,16,16]
+var str = ['M7lc1UVf-VE','Skr4CqKWA0g','M7lc1UVf-VE','qz6-ScWea_I','M7lc1UVf-VE','hF89aQhAOKI'];
+var st = [4,4,4,7,7,8,8];
+var end = [12,12,12,15,15,16,16];
 
     // when video ends
         function onPlayerStateChange(event) {  
 
                     if(event.data === YT.PlayerState.ENDED) { 
                 
-                player.loadVideoById({videoId: str[i], startSeconds:st[i],  endSeconds:end[i], autoplay:1})
-                          i = i + 1;
+                        player.loadVideoById({videoId: str[i], startSeconds:st[i],  endSeconds:end[i]})
+                                  i = i + 1;
 
             }
         }
