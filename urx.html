@@ -39,8 +39,10 @@ function callback(position){
 		client.search('near:42,-71', {
 			success: function(searchResponse) {
 				console.log(searchResponse);
+				var s = searchResponse;
 			}
 		});
+		console.log(s.data.result.0.description)
 	</script>
 
 
