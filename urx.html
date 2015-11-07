@@ -33,10 +33,10 @@ function callback(position){
 
 	<script src="https://static.urx.io/sdk/latest/client.min.js"></script>
 	<script>
-	    var lat = position.coords.latitude;
-    	var lon = position.coords.longitude;
+		var la = position.coords.latitude ;
+		var lo = position.coords.longitude ;
 		var client = new urx.Client('M2T1wE0bXRvqFHO-SoDDNnwEYcB8o2LzHnIWdcOINFldIId5ZOXrnzMV2FrGNWg=.M2T1wE0bXRvqFHO-SoDDNnwEYcB8o2Lz');
-		client.search('near:'+lat+','+lon, {
+		client.search('near:'+la+','+lo, {
 			success: function(searchResponse) {
 				console.log(searchResponse);
 			}
