@@ -36,14 +36,14 @@ function callback(position){
 		//var la = position.coords.latitude ;
 		//var lo = position.coords.longitude ;
 		var client = new urx.Client('M2T1wE0bXRvqFHO-SoDDNnwEYcB8o2LzHnIWdcOINFldIId5ZOXrnzMV2FrGNWg=.M2T1wE0bXRvqFHO-SoDDNnwEYcB8o2Lz');
-		client.search('near:42,-71 domain:opentable.com', {
+		client.search('domain:opentable.com near:42,-71 within:50mi', {
 			success: function(searchResponse) {
 				console.log(searchResponse);
 				var s = searchResponse;
 				console.log(len(s.results));
 				console.log(s.results[0].data.description);
-				console.log(s.results[1].data.description);
-				console.log(s.results[2].data.description);
+				//console.log(s.results[1].data.description);
+				//console.log(s.results[2].data.description);
 			}
 		});
 	</script>
