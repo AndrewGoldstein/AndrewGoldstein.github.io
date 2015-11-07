@@ -8,7 +8,8 @@ Click Show location button and run :)
  
 <br/>
 Latitude: <span id="latitude">..</span> <br>
-Longitude: <span id="longitude">..</span>
+Longitude: <span id="longitude">..</span><br>
+	HEY:			<span id="heya">  .....</span>
 
 
 <SCRIPT>
@@ -43,14 +44,13 @@ function callback(position){
 				console.log(s.results.length);
 				console.log(s.results[0].data.description);
 				console.log(s.results[1].data.description);
-				var w = s.results[1].data.description
-				document.getElementById('heya').src = w
+				var w = s.results[1].data.description;
+				document.getElementById('heya').src = w;
 				//console.log(s.results[2].data.description);
 			}
 		});
 	</script>
 
-				<div id="heya">  .....</div>
 
 
 
