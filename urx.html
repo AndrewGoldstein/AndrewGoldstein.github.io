@@ -30,6 +30,20 @@ function callback(position){
 
 
 
+
+	<script src="https://static.urx.io/sdk/latest/client.min.js"></script>
+	<script>
+		var client = new urx.Client('M2T1wE0bXRvqFHO-SoDDNnwEYcB8o2LzHnIWdcOINFldIId5ZOXrnzMV2FrGNWg=.M2T1wE0bXRvqFHO-SoDDNnwEYcB8o2Lz');
+		client.search('ellie goulding', {
+			success: function(searchResponse) {
+				console.log(searchResponse);
+			}
+		});
+	</script>
+
+
+
+
     <div style="width:320px;cursor:pointer;"><script id="the-button" class="urx-button" ></script></div>
       </body>
 </html>
