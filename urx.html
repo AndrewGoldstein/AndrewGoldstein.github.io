@@ -39,7 +39,7 @@ function callback(position){
 		client.search('near:'+lat+','+lon, {
 			success: function(searchResponse) {
 				console.log(searchResponse);
-				console.log(searchResponse.data.result[0])
+				console.log(searchResponse.data.result)
 			}
 
 		});
