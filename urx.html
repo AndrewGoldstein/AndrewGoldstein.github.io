@@ -40,9 +40,9 @@ function callback(position){
 			success: function(searchResponse) {
 				console.log(searchResponse);
 				var s = searchResponse;
-				console.log(len(s.results));
+				console.log(s.results.length);
 				console.log(s.results[0].data.description);
-				//console.log(s.results[1].data.description);
+				console.log(s.results[1].data.description);
 				//console.log(s.results[2].data.description);
 			}
 		});
