@@ -18,25 +18,16 @@ function showlocation(){
 function callback(position){
     document.getElementById('latitude').innerHTML=position.coords.latitude;
     document.getElementById('longitude').innerHTML=position.coords.longitude;
+    var src = "https://views.urx.io/button.js?api_key=PQaKW8b0zBYSMS4UvuJ9TwYj1kyux8GHB7kH738GXgqRL0CPC69eiJTPQy4pK9A=.PQaKW8b0zBYSMS4UvuJ9TwYj1kyux8GH&action=TicketsAction&desktop_enabled=true&keywords=ed%sheeran&filter=domain%3Astubhub.com"; // Add lat-lon
+    document.getElementById('the-button').src = src;
 }
 </SCRIPT>
 
 
-<script>
-var i = 0;
-function hey(){
-	r = navigator.geolocation.getCurrentPosition();
-	console.log(r);
-
-	console.log(position.coords.latitude);
-}
-</script>
-
-console.log(position.coords.latitude)
 
 
 
 
-    <div style="width:320px;cursor:pointer;"><script class="urx-button" async src="https://views.urx.io/button.js?api_key=PQaKW8b0zBYSMS4UvuJ9TwYj1kyux8GHB7kH738GXgqRL0CPC69eiJTPQy4pK9A=.PQaKW8b0zBYSMS4UvuJ9TwYj1kyux8GH&action=TicketsAction&desktop_enabled=true&keywords=ed%sheeran&filter=domain%3Astubhub.com"></script></div>
+    <div style="width:320px;cursor:pointer;"><script id="the-button" class="urx-button" ></script></div>
       </body>
 </html>
