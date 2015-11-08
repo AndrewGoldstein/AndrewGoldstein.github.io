@@ -36,9 +36,10 @@ function callback(position){
 				var s = searchResponse;
 				len = s.results.length;
 				for (i = 0; i < len; i++){
-					console.log(s.results[0].data.description);
-					console.log(s.results[1].data.description);
-					console.log(s.results[2].data.description);
+					//console.log(s.results[0].data.description);
+					//console.log(s.results[1].data.description);
+					console.log(s.results[i].data.description);
+
 					document.getElementById('heya'+ i.toString()).innerHTML=s.results[i].data.description;
 				}
 			}
