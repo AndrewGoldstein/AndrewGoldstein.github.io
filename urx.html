@@ -38,9 +38,10 @@ function callback(position){
 				for (i = 0; i < len; i++){
 					//console.log(s.results[0].data.description);
 					//console.log(s.results[1].data.description);
-					console.log(s.results[i].data.description);
+					//console.log(s.results[i].data.name);
+					console.log(s.results[i].data.potentialAction.target.urlTemplate)
 
-					document.getElementById('heya'+ i.toString()).innerHTML=s.results[i].data.description;
+					document.getElementById('heya'+ i.toString()).innerHTML=s.results[i].data.name;
 				}
 			}
 		});
@@ -51,31 +52,5 @@ function callback(position){
 </SCRIPT>
 
 
-
-
-	<script src="https://static.urx.io/sdk/latest/client.min.js"></script>
-	<script>
-		//var la = position.coords.latitude ;
-		//var lo = position.coords.longitude ;
-		var client = new urx.Client('PQaKW8b0zBYSMS4UvuJ9TwYj1kyux8GHB7kH738GXgqRL0CPC69eiJTPQy4pK9A=.PQaKW8b0zBYSMS4UvuJ9TwYj1kyux8GH');
-		client.search('domain:opentable.com near:40.4,-74', {
-			success: function(searchResponse) {
-				console.log(searchResponse);
-				var s = searchResponse;
-				console.log(s.results.length);
-				console.log(s.results[0].data.description);
-				console.log(s.results[1].data.description);
-				console.log(s.results[2].data.description);
-
-			}
-		});
-	</script>
-
-
-
-    <div style="width:320px;cursor:pointer;"><script id="the-buttona" class="urx-button" ></script></div>
-    <div style="width:320px;cursor:pointer;"><script id="the-buttonb" class="urx-button" ></script></div>
-    <div style="width:320px;cursor:pointer;"><script id="the-buttonc" class="urx-button" ></script></div>
-    <div style="width:320px;cursor:pointer;"><script id="the-buttond" class="urx-button" ></script></div>
       </body>
 </html>
