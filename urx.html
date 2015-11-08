@@ -29,7 +29,7 @@ function callback(position){
     //var a = "https://views.urx.io/button.js?api_key=PQaKW8b0zBYSMS4UvuJ9TwYj1kyux8GHB7kH738GXgqRL0CPC69eiJTPQy4pK9A=.PQaKW8b0zBYSMS4UvuJ9TwYj1kyux8GH&action=ListenAction&desktop_enabled=true&filter=domain%3Aseatgeek.com&filter=near%3A" + lat + "," + lon ; // Add lat-lon
     //document.getElementById('the-buttond').src = a;
     var client = new urx.Client('PQaKW8b0zBYSMS4UvuJ9TwYj1kyux8GHB7kH738GXgqRL0CPC69eiJTPQy4pK9A=.PQaKW8b0zBYSMS4UvuJ9TwYj1kyux8GH');
-		client.search('domain:yelp.com near:'+lat.toString()+','+lon.toString(), {
+		client.search('domain:foursquare.com near:'+lat.toString()+','+lon.toString(), {
 			success: function(searchResponse) {
 				console.log(searchResponse);
 				var s = searchResponse;
@@ -37,10 +37,9 @@ function callback(position){
 				constant = 4
 				for (i = 0; i < 4; i++){
 
-					console.log(s.results[i].data.potentialAction.target.urlTemplate)
-					//document.getElementById('heya'+i.toString()).innerHTML=s.results[i].data.name;
-					document.getElementById('heya'+(i).toString()).innerHTML=s.results[i].data.name;
-					document.getElementById('heya'+(i).toString()).href=s.results[i].data.potentialAction.target.urlTemplate;
+						console.log(s.results[i].data.potentialAction.target.urlTemplate)
+						document.getElementById('heya'+i.toString()).innerHTML=s.results[i].data.name;
+						document.getElementById('heya'+i.toString()).href=s.results[i].data.potentialAction.target.urlTemplate;
 
 				}
 			}
