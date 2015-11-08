@@ -38,7 +38,7 @@ function callback(position){
 				j = 0
 				for (i = 0; i < len; i++){
 					while (j < 4){
-						if (s.results[i].data.potentialAction.target.urlTemplate.substring(23, 25) = 'fo'){
+						if (s.results[i].data.potentialAction.target.urlTemplate.substring(23, 25) == 'fo'){
 
 							console.log(s.results[i].data.potentialAction.target.urlTemplate);
 							document.getElementById('heya'+i.toString()).innerHTML=s.results[i].data.name;
