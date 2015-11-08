@@ -34,10 +34,10 @@ function callback(position){
 				console.log(s.results[0].data.description);
 				console.log(s.results[1].data.description);
 				console.log(s.results[2].data.description);
+				document.getElementById('heya').innerHTML=s.results[2].data.description;
 
 			}
 		});
-    document.getElementById('heya').innerHTML=s.results[2].data.description;
 
 
 
