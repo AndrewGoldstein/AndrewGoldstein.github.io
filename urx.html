@@ -22,9 +22,15 @@ function callback(position){
     var lon = position.coords.longitude;
     console.log(lat)
     console.log(lon)
-    var src = "https://views.urx.io/button.js?api_key=PQaKW8b0zBYSMS4UvuJ9TwYj1kyux8GHB7kH738GXgqRL0CPC69eiJTPQy4pK9A=.PQaKW8b0zBYSMS4UvuJ9TwYj1kyux8GH&action=TicketsAction&desktop_enabled=true&filter=domain%3Astubhub.com&filter=near%3A" + lat + "," + lon ; // Add lat-lon
-    console.log(src)
-    document.getElementById('the-button').src = src;
+    var a = "https://views.urx.io/button.js?api_key=PQaKW8b0zBYSMS4UvuJ9TwYj1kyux8GHB7kH738GXgqRL0CPC69eiJTPQy4pK9A=.PQaKW8b0zBYSMS4UvuJ9TwYj1kyux8GH&action=TicketsAction&desktop_enabled=true&filter=domain%3Astubhub.com&filter=near%3A" + lat + "," + lon ; // Add lat-lon
+    var b = "https://views.urx.io/button.js?api_key=PQaKW8b0zBYSMS4UvuJ9TwYj1kyux8GHB7kH738GXgqRL0CPC69eiJTPQy4pK9A=.PQaKW8b0zBYSMS4UvuJ9TwYj1kyux8GH&action=TicketsAction&desktop_enabled=true&filter=domain%3Aseatgeek.com&filter=near%3A" + lat + "," + lon ; // Add lat-lon
+    var c = "https://views.urx.io/button.js?api_key=PQaKW8b0zBYSMS4UvuJ9TwYj1kyux8GHB7kH738GXgqRL0CPC69eiJTPQy4pK9A=.PQaKW8b0zBYSMS4UvuJ9TwYj1kyux8GH&action=TicketsAction&desktop_enabled=true&filter=domain%3Astubhub.com&filter=near%3A" + lat + "," + lon ; // Add lat-lon
+    var d = "https://views.urx.io/button.js?api_key=PQaKW8b0zBYSMS4UvuJ9TwYj1kyux8GHB7kH738GXgqRL0CPC69eiJTPQy4pK9A=.PQaKW8b0zBYSMS4UvuJ9TwYj1kyux8GH&action=TicketsAction&desktop_enabled=true&filter=domain%3Aticketmaster.com&filter=near%3A" + lat + "," + lon ; // Add lat-lon
+    document.getElementById('the-buttona').src = a;
+    document.getElementById('the-buttonb').src = b;
+    document.getElementById('the-buttonc').src = c;
+    document.getElementById('the-buttond').src = d;
+
 }
 </SCRIPT>
 
@@ -53,8 +59,11 @@ function callback(position){
 
 
 
-	<div><script id="heya"></script></div>
+	<div><script id="heya">..</script></div>
+    <div style="width:320px;cursor:pointer;"><script id="the-buttona" class="urx-button" ></script></div>
+    <div style="width:320px;cursor:pointer;"><script id="the-buttonb" class="urx-button" ></script></div>
+    <div style="width:320px;cursor:pointer;"><script id="the-buttonc" class="urx-button" ></script></div>
 
-    <div style="width:320px;cursor:pointer;"><script id="the-button" class="urx-button" ></script></div>
+    <div style="width:320px;cursor:pointer;"><script id="the-buttond" class="urx-button" ></script></div>
       </body>
 </html>
