@@ -3,19 +3,18 @@
   
 
 <body onload="showlocation()">
-Click Show location button and run :)
-<input type="button" value="Show Location" onclick="showlocation()"/> 
- 
-<br/>
-Latitude: <span id="latitude">..</span> <br>
-Longitude: <span id="longitude">..</span><br>
-Hello: <span id="heya0">..</span>
+<!-- 
+input type="button" value="Show Location" onclick="showlocation()"/ 
+ Latitude: <span id="latitude">..</span> <br>
+Longitude: <span id="longitude">..</span><br> 
+-->
+<span id="heya0">..</span>
 <a href="sdfds" id="heya4">URL</a><br>
-Hello: <span id="heya1">..</span>
+<span id="heya1">..</span>
 <a href="sdfds" id="heya5">URL</a><br>
-Hello: <span id="heya2">..</span>
+<span id="heya2">..</span>
 <a href="sdfds" id="heya6">URL</a><br>
-Hello: <span id="heya3">..</span>
+<span id="heya3">..</span>
 <a href="sdfds" id="heya7">URL</a><br>
 
 	<script src="https://static.urx.io/sdk/latest/client.min.js"></script>
@@ -42,13 +41,10 @@ function callback(position){
 				constant = 4
 				for (i = 0; i < 4; i++){
 
-					//console.log(s.results[0].data.description);
-					//console.log(s.results[1].data.description);
-					//console.log(s.results[i].data.name);
 					console.log(s.results[i].data.potentialAction.target.urlTemplate)
-
 					document.getElementById('heya'+i.toString()).innerHTML=s.results[i].data.name;
-					document.getElementById('heya'+(i+constant).toString()).href=s.results[i+constant].data.potentialAction.target.urlTemplate;
+					document.getElementById('heya'+(i+constant).toString()).innerHTML=s.results[i].data.name;
+					document.getElementById('heya'+(i+constant).toString()).href=s.results[i].data.potentialAction.target.urlTemplate;
 
 				}
 			}
