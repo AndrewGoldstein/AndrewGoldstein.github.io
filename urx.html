@@ -10,9 +10,14 @@ Click Show location button and run :)
 Latitude: <span id="latitude">..</span> <br>
 Longitude: <span id="longitude">..</span><br>
 Hello: <span id="heya0">..</span><br>
+<a href="sdfds" id="heya4">URL</a>
 Hello: <span id="heya1">..</span><br>
+<a href="sdfds" id="heya5">URL</a>
+
 Hello: <span id="heya2">..</span><br>
+<a href="sdfds" id="heya6">URL</a>
 Hello: <span id="heya3">..</span><br>
+<a href="sdfds" id="heya7">URL</a>
 
 	<script src="https://static.urx.io/sdk/latest/client.min.js"></script>
 
@@ -35,6 +40,7 @@ function callback(position){
 				console.log(searchResponse);
 				var s = searchResponse;
 				len = s.results.length;
+				constant = 4
 				for (i = 0; i < len; i++){
 					//console.log(s.results[0].data.description);
 					//console.log(s.results[1].data.description);
@@ -42,6 +48,8 @@ function callback(position){
 					console.log(s.results[i].data.potentialAction.target.urlTemplate)
 
 					document.getElementById('heya'+ i.toString()).innerHTML=s.results[i].data.name;
+					document.getElementById('heya'+ (i+constant).toString() ).href="google.com";
+
 				}
 			}
 		});
