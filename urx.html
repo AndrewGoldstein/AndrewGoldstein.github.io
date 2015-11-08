@@ -27,8 +27,8 @@ function callback(position){
     var lon = position.coords.longitude;
     console.log(lat)
     console.log(lon)
-    var a = "https://views.urx.io/button.js?api_key=PQaKW8b0zBYSMS4UvuJ9TwYj1kyux8GHB7kH738GXgqRL0CPC69eiJTPQy4pK9A=.PQaKW8b0zBYSMS4UvuJ9TwYj1kyux8GH&action=ListenAction&desktop_enabled=true&filter=domain%3Aseatgeek.com&filter=near%3A" + lat + "," + lon ; // Add lat-lon
-    document.getElementById('the-buttond').src = a;
+    //var a = "https://views.urx.io/button.js?api_key=PQaKW8b0zBYSMS4UvuJ9TwYj1kyux8GHB7kH738GXgqRL0CPC69eiJTPQy4pK9A=.PQaKW8b0zBYSMS4UvuJ9TwYj1kyux8GH&action=ListenAction&desktop_enabled=true&filter=domain%3Aseatgeek.com&filter=near%3A" + lat + "," + lon ; // Add lat-lon
+    //document.getElementById('the-buttond').src = a;
     var client = new urx.Client('PQaKW8b0zBYSMS4UvuJ9TwYj1kyux8GHB7kH738GXgqRL0CPC69eiJTPQy4pK9A=.PQaKW8b0zBYSMS4UvuJ9TwYj1kyux8GH');
 		client.search('domain:opentable.com near:40.4,-74', {
 			success: function(searchResponse) {
