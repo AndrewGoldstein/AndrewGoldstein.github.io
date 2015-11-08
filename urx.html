@@ -9,6 +9,7 @@ Click Show location button and run :)
 <br/>
 Latitude: <span id="latitude">..</span> <br>
 Longitude: <span id="longitude">..</span><br>
+Hello: <span id="heya">..</span><br>
 
 
 <SCRIPT>
@@ -23,13 +24,22 @@ function callback(position){
     console.log(lat)
     console.log(lon)
     var a = "https://views.urx.io/button.js?api_key=PQaKW8b0zBYSMS4UvuJ9TwYj1kyux8GHB7kH738GXgqRL0CPC69eiJTPQy4pK9A=.PQaKW8b0zBYSMS4UvuJ9TwYj1kyux8GH&action=ListenAction&desktop_enabled=true&filter=domain%3Aseatgeek.com&filter=near%3A" + lat + "," + lon ; // Add lat-lon
-    var b = "https://views.urx.io/button.js?api_key=PQaKW8b0zBYSMS4UvuJ9TwYj1kyux8GHB7kH738GXgqRL0CPC69eiJTPQy4pK9A=.PQaKW8b0zBYSMS4UvuJ9TwYj1kyux8GH&action=TicketsAction&desktop_enabled=true&filter=domain%3Aseatgeek.com&filter=near%3A" + lat + "," + lon ; // Add lat-lon
-    var c = "https://views.urx.io/button.js?api_key=PQaKW8b0zBYSMS4UvuJ9TwYj1kyux8GHB7kH738GXgqRL0CPC69eiJTPQy4pK9A=.PQaKW8b0zBYSMS4UvuJ9TwYj1kyux8GH&action=RetailAction&desktop_enabled=true&filter=domain%3Astubhub.com&filter=near%3A" + lat + "," + lon ; // Add lat-lon
-    var d = "https://views.urx.io/button.js?api_key=PQaKW8b0zBYSMS4UvuJ9TwYj1kyux8GHB7kH738GXgqRL0CPC69eiJTPQy4pK9A=.PQaKW8b0zBYSMS4UvuJ9TwYj1kyux8GH&action=ReserveAction&desktop_enabled=true&filter=domain%3Aticketmaster.com&filter=near%3A" + lat + "," + lon ; // Add lat-lon
-    document.getElementById('the-buttona').src = a;
-    document.getElementById('the-buttonb').src = b;
-    document.getElementById('the-buttonc').src = c;
     document.getElementById('the-buttond').src = d;
+    var client = new urx.Client('PQaKW8b0zBYSMS4UvuJ9TwYj1kyux8GHB7kH738GXgqRL0CPC69eiJTPQy4pK9A=.PQaKW8b0zBYSMS4UvuJ9TwYj1kyux8GH');
+		client.search('domain:opentable.com near:40.4,-74', {
+			success: function(searchResponse) {
+				console.log(searchResponse);
+				var s = searchResponse;
+				console.log(s.results.length);
+				console.log(s.results[0].data.description);
+				console.log(s.results[1].data.description);
+				console.log(s.results[2].data.description);
+
+			}
+		});
+    document.getElementById('heya').innerHTML=s.results[2].data.description;
+
+
 
 }
 </SCRIPT>
@@ -57,7 +67,6 @@ function callback(position){
 
 
 
-	<div><script id="heya">..</script></div>
     <div style="width:320px;cursor:pointer;"><script id="the-buttona" class="urx-button" ></script></div>
     <div style="width:320px;cursor:pointer;"><script id="the-buttonb" class="urx-button" ></script></div>
     <div style="width:320px;cursor:pointer;"><script id="the-buttonc" class="urx-button" ></script></div>
