@@ -24,8 +24,8 @@ function showlocation(){
     navigator.geolocation.watchPosition(callback);
 }
 function callback(position){
-    document.getElementById('latitude').innerHTML=position.coords.latitude;
-    document.getElementById('longitude').innerHTML=position.coords.longitude;
+    //document.getElementById('latitude').innerHTML=position.coords.latitude;
+    //document.getElementById('longitude').innerHTML=position.coords.longitude;
     var lat = position.coords.latitude;
     var lon = position.coords.longitude;
     console.log(lat)
