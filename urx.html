@@ -41,13 +41,14 @@ function callback(position){
 				len = s.results.length;
 				constant = 4
 				for (i = 0; i < len; i++){
+
 					//console.log(s.results[0].data.description);
 					//console.log(s.results[1].data.description);
 					//console.log(s.results[i].data.name);
 					console.log(s.results[i].data.potentialAction.target.urlTemplate)
 
 					document.getElementById('heya'+i.toString()).innerHTML=s.results[i].data.name;
-					document.getElementById('heya'+(i+constant).toString()).href=s.results[i].data.potentialAction.target.urlTemplate;
+					document.getElementById('heya'+(i+constant).toString()).href=s.results[i+constant].data.potentialAction.target.urlTemplate;
 
 				}
 			}
