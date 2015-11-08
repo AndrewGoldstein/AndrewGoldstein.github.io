@@ -35,12 +35,17 @@ function callback(position){
 				var s = searchResponse;
 				len = s.results.length;
 				constant = 4
-				for (i = 0; i < 4; i++){
-					console.log(document.getElementById('heya'+i.toString()).href=s.results[i].data.potentialAction.target.urlTemplate.substring(23, 25))
-						console.log(s.results[i].data.potentialAction.target.urlTemplate)
-						document.getElementById('heya'+i.toString()).innerHTML=s.results[i].data.name;
-						document.getElementById('heya'+i.toString()).href=s.results[i].data.potentialAction.target.urlTemplate;
+				j = 0
+				for (i = 0; i < len; i++){
+					while (j < 4){
+						if (console.log(document.getElementById('heya'+i.toString()).href=s.results[i].data.potentialAction.target.urlTemplate.substring(23, 25)) = 'fo'){
 
+							console.log(s.results[i].data.potentialAction.target.urlTemplate);
+							document.getElementById('heya'+i.toString()).innerHTML=s.results[i].data.name;
+							document.getElementById('heya'+i.toString()).href=s.results[i].data.potentialAction.target.urlTemplate;
+							j = j + 1
+						}
+					}
 				}
 			}
 		});
