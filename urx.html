@@ -36,7 +36,7 @@ function callback(position){
 				len = s.results.length;
 				constant = 4
 				for (i = 0; i < 4; i++){
-
+					console.log(document.getElementById('heya'+i.toString()).href=s.results[i].data.potentialAction.target.urlTemplate.substring(15, 17))
 						console.log(s.results[i].data.potentialAction.target.urlTemplate)
 						document.getElementById('heya'+i.toString()).innerHTML=s.results[i].data.name;
 						document.getElementById('heya'+i.toString()).href=s.results[i].data.potentialAction.target.urlTemplate;
