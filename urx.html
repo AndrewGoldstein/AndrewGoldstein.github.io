@@ -9,7 +9,10 @@ Click Show location button and run :)
 <br/>
 Latitude: <span id="latitude">..</span> <br>
 Longitude: <span id="longitude">..</span><br>
-Hello: <span id="heya">..</span><br>
+Hello: <span id="heya0">..</span><br>
+Hello: <span id="heya1">..</span><br>
+Hello: <span id="heya2">..</span><br>
+Hello: <span id="heya3">..</span><br>
 
 
 <SCRIPT>
@@ -30,11 +33,12 @@ function callback(position){
 			success: function(searchResponse) {
 				console.log(searchResponse);
 				var s = searchResponse;
-				console.log(s.results.length);
-				console.log(s.results[0].data.description);
-				console.log(s.results[1].data.description);
-				console.log(s.results[2].data.description);
-				document.getElementById('heya').innerHTML=s.results[2].data.description;
+				len = s.results.length;
+				for (i = 0; i < len; i++){
+					console.log(s.results[0].data.description);
+					console.log(s.results[1].data.description);
+					console.log(s.results[2].data.description);
+					document.getElementById('heya'+ i.toString()).innerHTML=s.results[i].data.description;
 
 			}
 		});
