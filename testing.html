@@ -11,7 +11,7 @@
 
 
 
-<select id="item2" onChange="go1(this.value)">
+<select id="item2" onChange="putCookie(this.value)">
   <option value="select">Destination</option>
   <option value="sf">San Francisco</option>
   <option value="sea">Seattle</option>
@@ -40,17 +40,15 @@ function go(orig){
 cookie_name = "dataCookie";
 var YouEntered;
 
-function go1(destination){
-    if (destination != ''){
+
+
+function putCookie() {
+if (destination != ''){
          console.log(destination);
          var YouEntered = destination;
          console.log(YouEntered);
     }
-} 
 
-
-
-function putCookie() {
 
 if(document.cookie != document.cookie) 
 {index = document.cookie.indexOf(cookie_name);}
@@ -65,22 +63,18 @@ document.cookie=cookie_name+"="+YouEntered+"; expires=Monday, 04-Apr-2020 05:00:
 
 }
 
+</SCRIPT>
 
+<!--
+<FORM NAME="cf">
 
+Enter A Word: <INPUT TYPE="text" NAME="cfd" size="20">
+<INPUT TYPE="button" Value="Set to Cookie" 
+onClick="putCookie()">
 
+</FORM>
 
-
-//</SCRIPT>
-
-//<FORM NAME="cf">
-
-//Enter A Word: <INPUT TYPE="text" NAME="cfd" size="20">
-//<INPUT TYPE="button" Value="Set to Cookie" 
-//onClick="putCookie()">
-
-//</FORM>
-
-
+-->
 
 
 
