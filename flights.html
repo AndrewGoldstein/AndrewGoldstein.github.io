@@ -1,0 +1,43 @@
+<SCRIPT LANGUAGE="JavaScript">
+
+cookie_name = "dataCookie";
+var YouWrote;
+
+function getName() {
+if(document.cookie)
+{
+index = document.cookie.indexOf(cookie_name);
+if (index != -1)
+{
+namestart = (document.cookie.indexOf("=", index) + 1);
+nameend = document.cookie.indexOf(";", index);
+if (nameend == -1) {nameend = document.cookie.length;}
+YouWrote = document.cookie.substring(namestart, nameend);
+return YouWrote;
+}
+}
+}
+
+YouWrote=getName();
+if (YouWrote == "dataCookie")
+{YouWrote = "Nothing_Entered"}
+
+
+</SCRIPT> 
+
+
+
+
+
+
+
+
+<SCRIPT LANGUAGE="javascript">
+document.write("You Entered " +YouWrote+ ".");
+</SCRIPT>
+<SCRIPT LANGUAGE="javascript">
+document.write("<FORM>")
+document.write("You Entered:") 
+document.write("<INPUT TYPE=text SIZE=30 VALUE=" +YouWrote+ ">");
+document.write("</FORM>")
+</SCRIPT>
