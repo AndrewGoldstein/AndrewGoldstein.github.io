@@ -11,7 +11,7 @@
 
 
 
-<select id="item2" onChange="putCookie(this.value)">
+<select id="item2" onChange="go1(this.value)">
   <option value="select">Destination</option>
   <option value="sf">San Francisco</option>
   <option value="sea">Seattle</option>
@@ -22,35 +22,14 @@
 
 
 
- <script>
-function go(orig){
-    if (orig != ''){
-         console.log(orig);
-    }
-}
- </script>
-
-
-
 
 
 
 <SCRIPT LANGUAGE="JavaScript">
 
-
-
-
-
-function putCookie(destination) {
 cookie_name = "dataCookie";
-var YouEntered;
 
-if (destination != ''){
-         console.log(destination);
-         var YouEntered = destination;
-         console.log(YouEntered);
-    }
-
+function putCookie(de) {
 
 if(document.cookie != document.cookie) 
 {index = document.cookie.indexOf(cookie_name);}
@@ -60,7 +39,7 @@ else
 if (index == -1)
 {
 //YouEntered=document.cf.cfd.value;
-document.cookie=cookie_name+"="+YouEntered+"; expires=Monday, 04-Apr-2020 05:00:00 GMT";
+document.cookie=cookie_name+"="+de+"; expires=Monday, 04-Apr-2020 05:00:00 GMT";
 }
 
 }
@@ -80,6 +59,22 @@ onClick="putCookie()">
 
 
 
+ <script>
+function go(orig){
+    if (orig != ''){
+         console.log(orig);
+    }
+}
+
+
+function go1(destination){
+    if (destination != ''){
+         console.log(destination);
+         putCookie(destination);
+         console.log(destination);
+    }
+} 
+ </script>
 
 
 
