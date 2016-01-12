@@ -1,0 +1,83 @@
+
+	
+
+<select id="item1" onChange="go(this.value)">
+  <option value="select">Select Your Home City!</option>
+  <option value="sf">San Francisco</option>
+  <option value="sea">Seattle</option>
+  <option value="nyc">New York</option>
+  <option value="bos">Boston</option>
+</select>
+
+
+
+<select id="item2" onChange="go1(this.value)">
+  <option value="select">Destination</option>
+  <option value="sf">San Francisco</option>
+  <option value="sea">Seattle</option>
+  <option value="nyc">New York</option>
+  <option value="bos">Boston</option>
+  <option value="surprise">Surprise Me!</option>
+</select>
+
+
+
+ <script>
+function go(orig){
+    if (orig != ''){
+         console.log(orig);
+    }
+}
+ </script>
+
+ <script>
+function go1(destination){
+    if (destination != ''){
+         console.log(destination);
+    }
+}
+ </script>
+
+
+
+
+
+<SCRIPT LANGUAGE="JavaScript">
+cookie_name = "dataCookie";
+var YouEntered;
+
+function putCookie() {
+
+if(document.cookie != document.cookie) 
+{index = document.cookie.indexOf(cookie_name);}
+else 
+{ index = -1;}
+
+if (index == -1)
+{
+YouEntered=document.cf.cfd.value;
+document.cookie=cookie_name+"="+YouEntered+"; expires=Monday, 04-Apr-2020 05:00:00 GMT";
+}
+
+}
+</SCRIPT>
+
+<FORM NAME="cf">
+
+Enter A Word: <INPUT TYPE="text" NAME="cfd" size="20">
+<INPUT TYPE="button" Value="Set to Cookie" 
+onClick="putCookie()">
+
+</FORM>
+
+
+
+
+
+
+
+
+
+
+<a href="flights.html">Jet to </a>
+
