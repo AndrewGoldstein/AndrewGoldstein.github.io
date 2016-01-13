@@ -25,11 +25,38 @@
 
 
 
+
 <SCRIPT LANGUAGE="JavaScript">
 
 cookie_name = "dataCookie";
 
-function putCookie(de) {
+function putCookie(or) {
+
+if(document.cookie != document.cookie) 
+{index = document.cookie.indexOf(cookie_name);}
+else 
+{ index = -1;}
+
+if (index == -1)
+{
+//YouEntered=document.cf.cfd.value;
+document.cookie=cookie_name+"="+or+"; expires=Monday, 04-Apr-2020 05:00:00 GMT";
+}
+
+}
+
+</SCRIPT>
+
+
+
+
+
+
+<SCRIPT LANGUAGE="JavaScript">
+
+cookie_name = "dataCookie1";
+
+function putCookie1(de) {
 
 if(document.cookie != document.cookie) 
 {index = document.cookie.indexOf(cookie_name);}
@@ -46,6 +73,11 @@ document.cookie=cookie_name+"="+de+"; expires=Monday, 04-Apr-2020 05:00:00 GMT";
 
 </SCRIPT>
 
+
+
+
+
+
 <!--
 <FORM NAME="cf">
 
@@ -60,9 +92,11 @@ onClick="putCookie()">
 
 
  <script>
-function go(orig){
-    if (orig != ''){
-         console.log(orig);
+function go(origin){
+    if (origin != ''){
+         console.log(origin);
+         putCookie(origin);
+         console.log(origin);
     }
 }
 
@@ -70,7 +104,7 @@ function go(orig){
 function go1(destination){
     if (destination != ''){
          console.log(destination);
-         putCookie(destination);
+         putCookie1(destination);
          console.log(destination);
     }
 } 
