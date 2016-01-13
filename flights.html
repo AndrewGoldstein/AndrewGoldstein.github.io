@@ -32,13 +32,13 @@ if (YouWrote == "dataCookie")
 
 <SCRIPT LANGUAGE="JavaScript">
 
-cookie_name = "dataCookie1";
+cookie_name1 = "dataCookie1";
 var YouWrote1;
 
 function getName1() {
 if(document.cookie)
 {
-index = document.cookie.indexOf(cookie_name);
+index = document.cookie.indexOf(cookie_name1);
 if (index != -1)
 {
 namestart = (document.cookie.indexOf("=", index) + 1);
@@ -62,22 +62,27 @@ if (YouWrote1 == "dataCookie1")
 
 
 <SCRIPT LANGUAGE="javascript">
-document.write("You Entered " +YouWrote1+ ".");
-</SCRIPT>
-<SCRIPT LANGUAGE="javascript">
-document.write("<FORM>")
-document.write("You Entered:") 
-document.write("<INPUT TYPE=text SIZE=30 VALUE=" +YouWrote1+ ">");
-document.write("</FORM>")
-</SCRIPT>
-
-
-<SCRIPT LANGUAGE="javascript">
 document.write("You Entered " +YouWrote+ ".");
 </SCRIPT>
 <SCRIPT LANGUAGE="javascript">
 document.write("<FORM>")
 document.write("You Entered:") 
 document.write("<INPUT TYPE=text SIZE=30 VALUE=" +YouWrote+ ">");
+document.write("</FORM>")
+</SCRIPT>
+
+
+
+
+
+
+
+<SCRIPT LANGUAGE="javascript">
+document.write("You Entered " +YouWrote1+ ".");
+</SCRIPT>
+<SCRIPT LANGUAGE="javascript">
+document.write("<FORM>")
+document.write("You Entered:") 
+document.write("<INPUT TYPE=text SIZE=30 VALUE=" +YouWrote1+ ">");
 document.write("</FORM>")
 </SCRIPT>
