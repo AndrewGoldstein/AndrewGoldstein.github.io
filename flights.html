@@ -86,3 +86,23 @@ document.write("You Entered:")
 document.write("<INPUT TYPE=text SIZE=30 VALUE=" +YouWrote1+ ">");
 document.write("</FORM>")
 </SCRIPT>
+
+
+
+<p id="demo"></p>
+
+<script>
+var flights =[[ 1,9,11,2,6,10,"sea", "sf"], [ 1,9,11,2,6,10,"nyc", "bos"]];
+
+if (YouWrote == "sea") {
+	document.getElementById("demo").innerHTML = flights[0];
+}
+else {
+	document.getElementById("demo").innerHTML = flights[1];
+}
+
+</script>
+
+
+
+
