@@ -30,7 +30,7 @@
 
 cookie_name = "dataCookie";
 
-function putCookie(or) {
+function putCookie(origin) {
 
 if(document.cookie != document.cookie) 
 {index = document.cookie.indexOf(cookie_name);}
@@ -40,7 +40,7 @@ else
 if (index == -1)
 {
 //YouEntered=document.cf.cfd.value;
-document.cookie=cookie_name+"="+or+"; expires=Monday, 04-Apr-2020 05:00:00 GMT";
+document.cookie=cookie_name+"="+origin+"; expires=Monday, 04-Apr-2020 05:00:00 GMT";
 }
 
 }
