@@ -78,7 +78,30 @@
 
         <h1>Jumbotron heading</h1>
         <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-        <p><a class="btn btn-lg btn-success" href="#" role="button">Sign up today</a></p>
+        <p>
+
+            <select id="item1" onChange="go(this.value)">
+              <option value="select">Select Your Home City!</option>
+              <option value="sf">San Francisco</option>
+              <option value="sea">Seattle</option>
+              <option value="nyc">New York</option>
+              <option value="bos">Boston</option>
+            </select>
+                  <script>
+                  function go(origin){
+                      if (origin != ''){
+                           console.log(origin);
+                           console.log(origin);
+                      }
+                  }
+                   </script>
+
+
+
+
+
+            <a class="btn btn-lg btn-success" href="#" role="button">Sign up today</a>
+        </p>
       </div>
 
       <div class="row marketing">
