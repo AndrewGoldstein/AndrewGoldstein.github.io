@@ -219,8 +219,8 @@ dest:"nyc"}];
 
 for (i = 0; i < flights.length; i++) {
 	document.write(flights[i].home);
-	if (flights[i].home == city1) {
-		document.write(city1);
+	if (flights[i].home == city) {
+		document.write(city);
 		document.getElementById("fill-this").innerHTML = "January " + flights[i].outbound + " at " + flights[i].o1 + "pm  - January" + flights[i].outbound + " at " + flights[i].o2 + "pm" ;
 	}
 };
