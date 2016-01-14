@@ -147,7 +147,8 @@ document.write("You Entered " +YouWrote1+ ".");
                                 <script>
                                 document.getElementById("fill-me2").innerHTML = YouWrote + " to " + YouWrote1;
                                 </script>
-                                  <p id="fill-this"> Nunc pretium quis sapien eu rhoncus. Suspendisse ornare gravida mi, et placerat tellus tempor vitae.</p>
+                                  <p id="fill-this"> </p>
+
                                 </div><!--end .accordion-section-content-->
                               </div><!--end .accordion-section-->
 
@@ -157,7 +158,7 @@ document.write("You Entered " +YouWrote1+ ".");
                                 <script>
                                 document.getElementById("fill-me-in2").innerHTML = YouWrote1 + " to " + YouWrote;
                                 </script>
-                                  <p id="fill-this2">Mauris interdum fringilla augue vitae tincidunt. Curabitur vitae tortor id eros euismod ultrices. </p>
+                                  <p id="fill-this2"> </p>
                                 </div><!--end .accordion-section-content-->
                               </div><!--end .accordion-section-->
                             </div><!--end .accordion-->
@@ -226,9 +227,18 @@ for (i = 0; i < flights.length; i++) {
 		else {var o1 = flights[i].o1.toString() ; var m1 = "am";}
 		if (flights[i].o2 > 12) {var o2 = (flights[i].o2 - 12).toString() ; var m2 = "pm" ;}
 		else {var o2 = flights[i].o2.toString() ; var m2 = "am";}
-		if (flights[i].o2 <= flights[i].o1) {var redeye = flights[i].outbound + " at ";}
+		if (flights[i].o2 <= flights[i].o1) {var redeye = flights[i].outbound + " ";}
 		else {var redeye = "";}
-		document.getElementById("fill-this").innerHTML = flights[i].outbound + " at " + o1 + m1 + " - " + redeye + o2 + m2;
+		document.getElementById("fill-this").innerHTML = flights[i].outbound + " from " + o1 + m1 + " - " + redeye + o2 + m2;
+		if (flights[i].dest == city1) {
+			if (flights[i].r1 > 12) {var r1 = (flights[i].r1 - 12).toString() ; var m1 = "pm" ;}
+			else {var r1 = flights[i].r1.toString() ; var m1 = "am";}
+			if (flights[i].r2 > 12) {var r2 = (flights[i].r2 - 12).toString() ; var m2 = "pm" ;}
+			else {var r2 = flights[i].r2.toString() ; var m2 = "am";}
+			if (flights[i].r2 <= flights[i].r1) {var redeye = flights[i].outbound + " ";}
+			else {var redeye = "";}
+			document.getElementById("fill-this2").innerHTML = flights[i].outbound + " from " + r1 + m1 + " - " + redeye + r2 + m2;
+		}
 	}
 };
 
