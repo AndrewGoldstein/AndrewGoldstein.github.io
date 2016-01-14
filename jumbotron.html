@@ -80,22 +80,7 @@
         <p class="lead">Take a new adventure, visit a friend, hop on a romantic getaway. Sponteneity has reached new heights. Search last minute flight deals for this coming weekend!</p>
         <p>
 
-            <select id="item1" onChange="go(this.value)">
-              <option value="select">Select Your Home City!</option>
-              <option value="sf">San Francisco</option>
-              <option value="sea">Seattle</option>
-              <option value="nyc">New York</option>
-              <option value="bos">Boston</option>
-            </select>
-                  <script>
-                  function go(origin){
-                      if (origin != ''){
-                           console.log(origin);
-                           console.log(origin);
-                      }
-                  }
-                   </script>
-
+            
                           <div class="main">
                             <div class="accordion">
 
@@ -117,7 +102,7 @@
                                   function go(origin){
                                       if (origin != ''){
                                            console.log(origin);
-                                          document.getElementById("fill-me-in").innerHTML = origin;
+                                          document.getElementById("fill-me").innerHTML = origin;
                                            console.log(origin);
                                       }
                                   }
