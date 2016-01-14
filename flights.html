@@ -153,12 +153,14 @@ document.write("You Entered " +YouWrote1+ ".");
                               </div><!--end .accordion-section-->
 
                               <div class="accordion-section">
-                                <a id="fill-me-in2" class="accordion-section-title" href="#accordion-7">Select your Destination</a>
+                                <a id="fill-me-in2" class="accordion-section-title" href="#accordion-7"></a>
                                 <div id="accordion-7" class="accordion-section-content">
                                 <script>
                                 document.getElementById("fill-me-in2").innerHTML = YouWrote1 + " to " + YouWrote;
                                 </script>
                                   <p id="fill-this2"> </p>
+                                  <a class="btn btn-lg btn-success" onclick="myFunction()" role="button">Select</a>
+
                                 </div><!--end .accordion-section-content-->
                               </div><!--end .accordion-section-->
                             </div><!--end .accordion-->
@@ -166,7 +168,12 @@ document.write("You Entered " +YouWrote1+ ".");
 
 
 
-
+                                <script>
+                                function myfunction() {
+                                document.getElementById("fill-me-in2").innerHTML = hello;
+                                close_accordion_section();
+                                }
+                                </script>
 
 
 
@@ -222,7 +229,7 @@ for (i = 0; i < flights.length; i++) {
 	
 	document.write(flights[i].home);
 	if (flights[i].home == city) {
-		document.write(city);
+		//document.write(city);
 		if (flights[i].o1 > 12) {var o1 = (flights[i].o1 - 12).toString() ; var m1 = "pm" ;}
 		else {var o1 = flights[i].o1.toString() ; var m1 = "am";}
 		if (flights[i].o2 > 12) {var o2 = (flights[i].o2 - 12).toString() ; var m2 = "pm" ;}
@@ -235,9 +242,10 @@ for (i = 0; i < flights.length; i++) {
 			else {var r1 = flights[i].r1.toString() ; var m1 = "am";}
 			if (flights[i].r2 > 12) {var r2 = (flights[i].r2 - 12).toString() ; var m2 = "pm" ;}
 			else {var r2 = flights[i].r2.toString() ; var m2 = "am";}
-			if (flights[i].r2 <= flights[i].r1) {var redeye = flights[i].outbound + " ";}
+			if (flights[i].r2 <= flights[i].r1) {var redeye = flights[i].ret + " ";}
 			else {var redeye = "";}
-			document.getElementById("fill-this2").innerHTML = flights[i].outbound + " from " + r1 + m1 + " - " + redeye + r2 + m2;
+			document.getElementById("fill-this2").innerHTML = flights[i].ret + " from " + r1 + m1 + " - " + redeye + r2 + m2;
+			var hello = flights[i].ret + " from " + r1 + m1 + " - " + redeye + r2 + m2;
 		}
 	}
 };
@@ -260,11 +268,10 @@ for (i = 0; i < flights.length; i++) {
 
 
 
-move into accordion
-time conversion from 22 to 10
-multiple flight options in dropdown
+
 beef up flight selection options
 styling
+once selected, add button that populates header.
 
 
 
