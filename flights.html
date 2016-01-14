@@ -189,16 +189,18 @@ document.getElementById("fill-this2").innerHTML = flights[0][6];
 
 document.write(flights);
 for (each in flights) {
+	document.write(each);
+
 	document.write("Takes off: January " + each.outbound + " at " + each.o1 + "o'clock \n"  );
 };
-for (each1 in flights) {
+/*for (each1 in flights) {
 	document.write(each1.home);
 	if (each1[6] == city) {
 		document.write(city);
 		document.write(each1);
 	}
 };
-
+*/
 </script>  
 
 
