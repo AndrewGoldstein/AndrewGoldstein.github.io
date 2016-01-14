@@ -221,7 +221,11 @@ for (i = 0; i < flights.length; i++) {
 	document.write(flights[i].home);
 	if (flights[i].home == city) {
 		document.write(city);
-		document.getElementById("fill-this").innerHTML = "January " + flights[i].outbound + " at " + flights[i].o1 + "pm  - January" + flights[i].outbound + " at " + flights[i].o2 + "pm" ;
+		if (flights[i].o1 > 12) {var o1 = flights[i].o1 - 12 ; var m1 = "pm" }
+		else {var o1 = flights[i].o1; var m1 = "am"}
+		if (flights[i].o2 > 12) {var o2 = flights[i].o2 - 12 ; var m2 = "pm" }
+		else {var o2 = flights[i].o2; var m2 = "am"}
+		document.getElementById("fill-this").innerHTML = "January " + flights[i].outbound + " at " + o1 + m1 " -  + January" + flights[i].outbound + " at " + o2 + m2 ;
 	}
 };
 
@@ -245,6 +249,10 @@ for (i = 0; i < flights.length; i++) {
 
 move into accordion
 time conversion from 22 to 10
+multiple flight options in dropdown
+beef up flight selection options
+styling
+
 
 
 
