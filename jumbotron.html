@@ -118,10 +118,18 @@ document.cookie=cookie_name1+"="+de+"; expires=Monday, 04-Apr-2020 05:00:00 GMT"
 
 </SCRIPT>
 
+<script>
+jQuery(document).ready(function() {
+  function close_accordion_section() {
+    jQuery('.accordion .accordion-section-title').removeClass('active');
+    jQuery('.accordion .accordion-section-content').slideUp(300).removeClass('open');
+  }
+
+});
+</script>
 
 
-
-        <h3>What are you doing this weekend?</h3>
+        <h2>What are you doing this weekend?</h2>
         <p class="lead">Take a new adventure, visit a friend, hop on a romantic getaway. Sponteneity has reached new heights. Search last minute flight deals for this coming weekend!</p>
         <p>
 
@@ -149,6 +157,7 @@ document.cookie=cookie_name1+"="+de+"; expires=Monday, 04-Apr-2020 05:00:00 GMT"
                                            console.log(origin);
                                            document.getElementById("fill-me").innerHTML = origin;
                                            putCookie(origin);
+                                           close_accordion_section();
                                            console.log(origin);
                                       }
                                   }
@@ -180,6 +189,7 @@ document.cookie=cookie_name1+"="+de+"; expires=Monday, 04-Apr-2020 05:00:00 GMT"
                                                        console.log(destination);
                                                        document.getElementById("fill-me-in").innerHTML = destination;
                                                        putCookie1(destination);
+                                                       close_accordion_section();
                                                        console.log(destination);
                                                   }
                                               } 
@@ -189,7 +199,7 @@ document.cookie=cookie_name1+"="+de+"; expires=Monday, 04-Apr-2020 05:00:00 GMT"
 
 
                                   <a href="flights.html">Let's Jet!</a>
-                                  <p>Mauris interdum fringilla augue vitae tincidunt. Curabitur vitae tortor id eros euismod ultrices. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent nulla mi, rutrum ut feugiat at, vestibulum ut neque? Cras tincidunt enim vel aliquet facilisis. Duis congue ullamcorper vehicula. Proin nunc lacus, semper sit amet elit sit amet, aliquet pulvinar erat. Nunc pretium quis sapien eu rhoncus. Suspendisse ornare gravida mi, et placerat tellus tempor vitae.</p>
+                                  <p>Mauris interdum fringilla augue vitae tincidunt. Curabitur vitae tortor id eros euismod ultrices. </p>
                                 </div><!--end .accordion-section-content-->
                               </div><!--end .accordion-section-->
                             </div><!--end .accordion-->
