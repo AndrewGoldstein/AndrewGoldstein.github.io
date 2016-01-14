@@ -167,6 +167,7 @@ document.write("You Entered " +YouWrote1+ ".");
                             </div><!--end .accordion-->
                           </div>
 
+                                  <a class="btn btn-sm btn-success" role="button">Let's do this!</a>
 
   								<script>
   								if (YouWrote == "San Francisco") {var city = "SFO";}
@@ -254,10 +255,10 @@ for (i = 0; i < flights.length; i++) {
 		else {var o2 = flights[i].o2.toString() ; var m2 = "am";}
 		if (flights[i].o2 <= flights[i].o1) {
 			if (flights[i].outbound == "Friday") {
-			var redeye = " (Saturday)";
+			var redeye = " (Sat) ";
 			} 
 			else if (flights[i].outbound == "Thursday") {
-			var redeye = " (Friday)";
+			var redeye = " (Fri) ";
 			} 
 		}
 		else {var redeye = "";}
