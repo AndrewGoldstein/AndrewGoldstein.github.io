@@ -169,24 +169,7 @@ document.write("You Entered " +YouWrote1+ ".");
 
 
   								<script>
-                                function myFunction() {
-                                document.getElementById("fill-me2").innerHTML = wow; //"(" city1 +" to "+ city+ ") "  + wow;
-                                close_accordion_section();
-                                }
-                                </script>
-
-                                <script>
-                                function myFunction1() {
-                                document.getElementById("fill-me-in2").innerHTML = hello; //"(" city +" to "+ city1+ ") "  + hello;
-                                close_accordion_section();
-                                }
-                                </script>
-
-
-
-
-<script>
-if (YouWrote == "San Francisco") {var city = "SFO";}
+  								if (YouWrote == "San Francisco") {var city = "SFO";}
 else if (YouWrote == "New York City") {var city = "JFK";}
 else if (YouWrote == "Boston") {var city = "BOS";}
 else if (YouWrote == "Seattle") {var city = "SEA";}
@@ -197,6 +180,23 @@ else if (YouWrote1 == "New York City") {var city1 = "JFK";}
 else if (YouWrote1 == "Boston") {var city1 = "BOS";}
 else if (YouWrote1 == "Seattle") {var city1 = "SEA";}
 else  {var city1 = "fail";}
+
+                                function myFunction() {
+                                document.getElementById("fill-me2").innerHTML = wow; //"(" city1 +" to "+ city+ ") "  + wow;
+                                close_accordion_section();
+                                }
+                                
+                                function myFunction1() {
+                                document.getElementById("fill-me-in2").innerHTML = hello; //"(" city +" to "+ city1+ ") "  + hello;
+                                close_accordion_section();
+                                }
+                                </script>
+
+
+
+
+<script>
+
 
 //document.getElementById("fill-this").innerHTML = city1;
 
