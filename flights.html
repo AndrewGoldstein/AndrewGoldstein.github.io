@@ -147,6 +147,7 @@ else if (YouWrote == "New York City") {var city = "nyc";}
 else if (YouWrote == "Boston") {var city = "bos";}
 else if (YouWrote == "Seattle") {var city = "sea";}
 else  {var city = "fail";}
+
 if (YouWrote1 == "San Francisco") {var city1 = "sf";}
 else if (YouWrote1 == "New York City") {var city1 = "nyc";}
 else if (YouWrote1 == "Boston") {var city1 = "bos";}
@@ -161,15 +162,15 @@ document.getElementById("fill-this2").innerHTML = flights[0][6];
 
 //document.write(flights);
 for (each in flights) {
-	document.write("Takes off: January " +each[0].toString()+ " at " + each[1].toString() + "o'clock \n"  );
-}
+	document.write("Takes off: January " + each[0] + " at " + each[1] + "o'clock \n"  );
+};
 for (each in flights) {
-	document.write(each[6].toString())
+	document.write(each[6]);
 	if (each[6] == city) {
-		document.write(city)
-		document.write(each)
+		document.write(city);
+		document.write(each);
 	}
-}
+};
 
 </script>  
 
