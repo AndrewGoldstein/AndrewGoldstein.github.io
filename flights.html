@@ -156,15 +156,15 @@ else  {var city1 = "fail";}
 document.getElementById("fill-this").innerHTML = city1;
 
 var flights =[[ 15,18,20,17,19,21,"sf", "sea"], [ 15,20,22,17,21,23,"sf", "sea"], [ 16,7,9,18,7,9,"sf", "sea"],[ 16,7,9,18,19,21,"sf", "sea"],[ 16,10,12,18,19,21,"sf", "sea"],[ 15,7,15,17,18,21,"sf", "nyc"],[ 15,22,6,18,7,10,"sea", "nyc"], [ 15,22,6,18,18,21,"sea", "nyc"]];
-document.write(flights[0]);
+//document.write(flights[0]);
 document.getElementById("fill-this2").innerHTML = flights[0][6];
 
-document.write(flights);
+//document.write(flights);
 for (each in flights) {
-	document.write("Takes off: January " +each[0]+ " at " + each[1] + "o'clock \n"  );
+	document.write("Takes off: January " +each[0].toString()+ " at " + each[1].toString() + "o'clock \n"  );
 }
 for (each in flights) {
-	document.write(each[6])
+	document.write(each[6].toString())
 	if (each[6] == city) {
 		document.write(city)
 		document.write(each)
