@@ -53,66 +53,6 @@
 </script>
 
 
-        <h2>What are you doing this weekend?</h2>
-        <p class="lead">Take a new adventure, visit a friend, hop on a romantic getaway. Spontaneity has reached new heights. Search last minute flight deals for this coming weekend!</p>
-        <p id="fill-this">hey <p>
-        <p id="fill-this2"> hey2<p>
-
-
-          
-
-<script>
-var city;
-
-if (YouWrote == "San") {city = "sf";}
-if (YouWrote == "New") {city = "nyc";}
-if (YouWrote == "Boston") {city = "bos";}
-if (YouWrote == "Seattle") {city = "sea";}
-
-document.getElementById("fill-this").innerHTML = city;
-
-var flights =[[ 15,18,20,17,19,21,"sf", "sea"], [ 15,20,22,17,21,23,"sf", "sea"], [ 16,7,9,18,7,9,"sf", "sea"],[ 16,7,9,18,19,21,"sf", "sea"],[ 16,10,12,18,19,21,"sf", "sea"],[ 15,7,15,17,18,21,"sf", "nyc"],[ 15,22,6,18,7,10,"sf", "nyc"], [ 15,22,6,18,18,21,"sf", "nyc"]];
-document.write(flights[0]);
-document.getElementById("fill-this2").innerHTML = flights[0];
-
-document.write(flights);
-for (each in flights[0]) {
-	document.write("Takes off: January " +each[0]+ " at " + each[1] + "o'clock"  );
-}
-
-
-</script>  
-
-
-				
-      </div>
-
-      <footer class="footer">
-        <p>&copy; 2015 Weekend Flyer, Inc.</p>
-      </footer>
-
-    </div> <!-- /container -->
-
-  </body>
-</html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 <SCRIPT LANGUAGE="JavaScript">
@@ -186,6 +126,69 @@ document.write("You Entered " +YouWrote+ ".");
 <SCRIPT LANGUAGE="javascript">
 document.write("You Entered " +YouWrote1+ ".");
 </SCRIPT>
+
+
+        <h2>What are you doing this weekend?</h2>
+        <p class="lead">Take a new adventure, visit a friend, hop on a romantic getaway. Spontaneity has reached new heights. Search last minute flight deals for this coming weekend!</p>
+        <p id="fill-this">hey <p>
+        <p id="fill-this2"> hey2<p>
+
+
+          
+
+<script>
+var city;
+
+if (YouWrote == "San") {city = "sf";}
+if (YouWrote == "New") {city = "nyc";}
+if (YouWrote == "Boston") {city = "bos";}
+if (YouWrote == "Seattle") {city = "sea";}
+
+document.getElementById("fill-this").innerHTML = city;
+
+var flights =[[ 15,18,20,17,19,21,"sf", "sea"], [ 15,20,22,17,21,23,"sf", "sea"], [ 16,7,9,18,7,9,"sf", "sea"],[ 16,7,9,18,19,21,"sf", "sea"],[ 16,10,12,18,19,21,"sf", "sea"],[ 15,7,15,17,18,21,"sf", "nyc"],[ 15,22,6,18,7,10,"sf", "nyc"], [ 15,22,6,18,18,21,"sf", "nyc"]];
+document.write(flights[0]);
+document.getElementById("fill-this2").innerHTML = flights[0];
+
+document.write(flights);
+for (each in flights[0]) {
+	document.write("Takes off: January " +each[0]+ " at " + each[1] + "o'clock"  );
+}
+
+
+</script>  
+
+
+				
+      </div>
+
+      <footer class="footer">
+        <p>&copy; 2015 Weekend Flyer, Inc.</p>
+      </footer>
+
+    </div> <!-- /container -->
+
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
