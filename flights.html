@@ -213,16 +213,16 @@ dest:"nyc"}];
 
 
  //{} 16,7,9,18,7,9,"sf", "sea"],[ 16,7,9,18,19,21,"sf", "sea"],[ 16,10,12,18,19,21,"sf", "sea"],[ 15,7,15,17,18,21,"sf", "nyc"],[ 15,22,6,18,7,10,"sea", "nyc"], [ 15,22,6,18,18,21,"sea", "nyc"]];
-document.write(flights[0]);
+document.write(flights[0].o2);
 //document.getElementById("fill-this2").innerHTML = flights[0].home;
 
-document.write(city);
+document.write(city1);
 
 
 for (i = 0; i < flights.length; i++) {
 	document.write(flights[i].home);
-	if (flights[i].home == city) {
-		document.write(city);
+	if (flights[i].home == city1) {
+		document.write(city1);
 		document.write(flights[i]);
 	}
 	document.write("Takes off: January " + flights[i].outbound + " at " + flights[i].o1 + "o'clock \n"  );
