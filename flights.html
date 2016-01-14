@@ -1,3 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Weekend Flyer</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="jumbotron_narrow.css" rel="stylesheet">
+    
+    <link rel="stylesheet" type="text/css" href="accordion_demo.css">
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript" src="javascripts/accordion.js"></script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+      <div class="header clearfix">
+        <nav>
+          <ul class="nav nav-pills pull-right">
+            <li role="presentation" class="active"><a href="#">Home</a></li>
+            <li role="presentation"><a href="#">About</a></li>
+            <li role="presentation"><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+        <h3 class="text-muted">Weekend Flyer</h3>
+      </div>
+
+      <div class="jumbotron">
+
+
+
+<script>
+  function close_accordion_section() {
+    jQuery('.accordion .accordion-section-title').removeClass('active');
+    jQuery('.accordion .accordion-section-content').slideUp(300).removeClass('open');
+  }
+</script>
+
+
+        <h2>What are you doing this weekend?</h2>
+        <p class="lead">Take a new adventure, visit a friend, hop on a romantic getaway. Spontaneity has reached new heights. Search last minute flight deals for this coming weekend!</p>
+        <p>
+
+          
+
+<script>
+var city;
+
+if (YouWrote == "San") {city = "sf"}
+if (YouWrote == "New") {city = "nyc"}
+if (YouWrote == "Boston") {city = "bos"}
+if (YouWrote == "Seattle") {city = "sea"}
+
+
+var flights =[[ 15,18,20,17,19,21,"sf", "sea"], [ 15,20,22,17,21,23,"sf", "sea"], [ 16,7,9,18,7,9,"sf", "sea"],[ 16,7,9,18,19,21,"sf", "sea"],[ 16,10,12,18,19,21,"sf", "sea"],[ 15,7,15,17,18,21,"sf", "nyc"],[ 15,22,6,18,7,10,"sf", "nyc"], [ 15,22,6,18,18,21,"sf", "nyc"]];
+
+for (each in flights[0]) {
+	document.write("Takes off: January " +each[0]+ " at " + each[1] + "o'clock"  );
+}
+
+
+</script>  
+
+
+
+                          <div class="main">
+                            <div class="accordion">
+
+
+
+
+                              <div class="accordion-section">
+                                <a id="fill-me" class="accordion-section-title" href="#accordion-4">Select your Home City</a>
+                                <div id="accordion-4" class="accordion-section-content">
+                                    <select id="item1" onChange="go(this.value)">
+                                      <option value="select">Select Your Home City!</option>
+                                      <option value="San Francisco">San Francisco</option>
+                                      <option value="Seattle">Seattle</option>
+                                      <option value="New York City">New York City</option>
+                                      <option value="Boston">Boston</option>
+                                    </select>
+
+                                  <script>
+                                  function go(origin){
+                                      if (origin != ''){
+                                           console.log(origin);
+                                           document.getElementById("fill-me").innerHTML = origin;
+                                           putCookie(origin);
+                                           close_accordion_section();
+                                           console.log(origin);
+                                      }
+                                  }
+                                   </script>
+
+
+
+
+
+                                  <p> Nunc pretium quis sapien eu rhoncus. Suspendisse ornare gravida mi, et placerat tellus tempor vitae.</p>
+                                </div><!--end .accordion-section-content-->
+                              </div><!--end .accordion-section-->
+
+                              <div class="accordion-section">
+                                <a id="fill-me-in" class="accordion-section-title" href="#accordion-5">Select your Destination</a>
+                                <div id="accordion-5" class="accordion-section-content">
+                                  <select id="item2" onChange="go1(this.value)">
+                                    <option value="select">Destination</option>
+                                    <option value="San Francisco">San Francisco</option>
+                                    <option value="Seattle">Seattle</option>
+                                    <option value="New York City">New York</option>
+                                    <option value="Boston">Boston</option>
+                                    <option value="Adventure">Surprise Me!</option>
+                                  </select>
+
+                                              <script>
+                                              function go1(destination){
+                                                  if (destination != ''){
+                                                       console.log(destination);
+                                                       document.getElementById("fill-me-in").innerHTML = destination;
+                                                       putCookie1(destination);
+                                                       close_accordion_section();
+                                                       console.log(destination);
+                                                  }
+                                              } 
+                                               </script>
+
+                              
+
+
+                                  <p>Mauris interdum fringilla augue vitae tincidunt. Curabitur vitae tortor id eros euismod ultrices. </p>
+                                </div><!--end .accordion-section-content-->
+                              </div><!--end .accordion-section-->
+                            </div><!--end .accordion-->
+                          </div>
+
+
+
+            <a class="btn btn-lg btn-success" href="flights.html" role="button">Let's Jet!</a>
+        </p>
+      </div>
+
+      <footer class="footer">
+        <p>&copy; 2015 Weekend Flyer, Inc.</p>
+      </footer>
+
+    </div> <!-- /container -->
+
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <SCRIPT LANGUAGE="JavaScript">
 
 cookie_name = "dataCookie";
@@ -64,44 +249,13 @@ if (YouWrote1 == "dataCookie1")
 <SCRIPT LANGUAGE="javascript">
 document.write("You Entered " +YouWrote+ ".");
 </SCRIPT>
-<SCRIPT LANGUAGE="javascript">
-document.write("<FORM>")
-document.write("You Entered:") 
-document.write("<INPUT TYPE=text SIZE=30 VALUE=" +YouWrote+ ">");
-document.write("</FORM>")
-</SCRIPT>
-
-
-
-
-
 
 
 <SCRIPT LANGUAGE="javascript">
 document.write("You Entered " +YouWrote1+ ".");
 </SCRIPT>
-<SCRIPT LANGUAGE="javascript">
-document.write("<FORM>")
-document.write("You Entered:") 
-document.write("<INPUT TYPE=text SIZE=30 VALUE=" +YouWrote1+ ">");
-document.write("</FORM>")
-</SCRIPT>
 
 
-
-<p id="demo"></p>
-
-<script>
-var flights =[[ 1,9,11,2,6,10,"sea", "sf"], [ 1,9,11,2,6,10,"nyc", "bos"]];
-
-if (YouWrote == "sea") {
-	document.getElementById("demo").innerHTML = flights[0];
-}
-else {
-	document.getElementById("demo").innerHTML = flights[1];
-}
-
-</script>
 
 
 
