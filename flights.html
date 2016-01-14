@@ -182,12 +182,12 @@ else if (YouWrote1 == "Seattle") {var city1 = "SEA";}
 else  {var city1 = "fail";}
 
                                 function myFunction() {
-                                document.getElementById("fill-me2").innerHTML = "(" +city1 +" to "+ city+ ") "  + wow;
+                                document.getElementById("fill-me2").innerHTML = "(" +city1 +" to "+ city+ ")     "  + wow;
                                 close_accordion_section();
                                 }
                                 
                                 function myFunction1() {
-                                document.getElementById("fill-me-in2").innerHTML = "(" +city +" to "+ city1+ ") "  + hello;
+                                document.getElementById("fill-me-in2").innerHTML = "(" +city +" to "+ city1+ ")     "  + hello;
                                 close_accordion_section();
                                 }
                                 </script>
@@ -236,6 +236,7 @@ r2:10,
 home:"SEA", 
 dest:"JFK"}];
 
+var days_of_week = ["Wednesday", "Thursday", "Friday","Saturday","Sunday","Monday","Tuesday"]
 
  //{} 16,7,9,18,7,9,"sf", "sea"],[ 16,7,9,18,19,21,"sf", "sea"],[ 16,10,12,18,19,21,"sf", "sea"],[ 15,7,15,17,18,21,"sf", "nyc"],[ 15,22,6,18,7,10,"sea", "nyc"], [ 15,22,6,18,18,21,"sea", "nyc"]];
 //document.getElementById("fill-this2").innerHTML = flights[0].home;
@@ -251,7 +252,14 @@ for (i = 0; i < flights.length; i++) {
 		else {var o1 = flights[i].o1.toString() ; var m1 = "am";}
 		if (flights[i].o2 > 12) {var o2 = (flights[i].o2 - 12).toString() ; var m2 = "pm" ;}
 		else {var o2 = flights[i].o2.toString() ; var m2 = "am";}
-		if (flights[i].o2 <= flights[i].o1) {var redeye = flights[i].outbound + " ";}
+		if (flights[i].o2 <= flights[i].o1) {
+			if (flights[i].outbound == "Friday") {
+			var redeye = " (Saturday)";
+			} 
+			else if (flights[i].outbound == "Thursday") {
+			var redeye = " (Friday)";
+			} 
+		}
 		else {var redeye = "";}
 		document.getElementById("fill-this").innerHTML = flights[i].outbound + " from " + o1 + m1 + " - " + redeye + o2 + m2;
 		var wow = flights[i].outbound + " from " + o1 + m1 + " - " + redeye + o2 + m2;
