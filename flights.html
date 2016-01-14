@@ -169,8 +169,8 @@ document.write("You Entered " +YouWrote1+ ".");
 
 
                                 <script>
-                                function myfunction() {
-                                //document.getElementById("fill-me-in2").innerHTML = hello;
+                                function myFunction() {
+                                document.getElementById("fill-me-in2").innerHTML = hello;
                                 close_accordion_section();
                                 }
                                 </script>
@@ -227,7 +227,7 @@ dest:"nyc"}];
 
 for (i = 0; i < flights.length; i++) {
 	
-	document.write(flights[i].home);
+	//document.write(flights[i].home);
 	if (flights[i].home == city) {
 		//document.write(city);
 		if (flights[i].o1 > 12) {var o1 = (flights[i].o1 - 12).toString() ; var m1 = "pm" ;}
