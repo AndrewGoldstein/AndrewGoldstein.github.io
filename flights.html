@@ -148,6 +148,7 @@ document.write("You Entered " +YouWrote1+ ".");
                                 document.getElementById("fill-me2").innerHTML = YouWrote + " to " + YouWrote1;
                                 </script>
                                   <p id="fill-this"> </p>
+                                  <a class="btn btn-sm btn-success" onclick="myFunction()" role="button">Select</a>
 
                                 </div><!--end .accordion-section-content-->
                               </div><!--end .accordion-section-->
@@ -159,7 +160,7 @@ document.write("You Entered " +YouWrote1+ ".");
                                 document.getElementById("fill-me-in2").innerHTML = YouWrote1 + " to " + YouWrote;
                                 </script>
                                   <p id="fill-this2"> </p>
-                                  <a class="btn btn-sm btn-success" onclick="myFunction()" role="button">Select</a>
+                                  <a class="btn btn-sm btn-success" onclick="myFunction1()" role="button">Select</a>
 
                                 </div><!--end .accordion-section-content-->
                               </div><!--end .accordion-section-->
@@ -167,10 +168,16 @@ document.write("You Entered " +YouWrote1+ ".");
                           </div>
 
 
+  								<script>
+                                function myFunction() {
+                                document.getElementById("fill-me-in2").innerHTML = "(" city1 +" to "+ city+ ") "  + wow;
+                                close_accordion_section();
+                                }
+                                </script>
 
                                 <script>
-                                function myFunction() {
-                                document.getElementById("fill-me-in2").innerHTML = hello;
+                                function myFunction1() {
+                                document.getElementById("fill-me-in2").innerHTML = "(" city +" to "+ city1+ ") "  + hello;
                                 close_accordion_section();
                                 }
                                 </script>
@@ -179,16 +186,16 @@ document.write("You Entered " +YouWrote1+ ".");
 
 
 <script>
-if (YouWrote == "San Francisco") {var city = "sf";}
-else if (YouWrote == "New York City") {var city = "nyc";}
-else if (YouWrote == "Boston") {var city = "bos";}
-else if (YouWrote == "Seattle") {var city = "sea";}
+if (YouWrote == "San Francisco") {var city = "SFO";}
+else if (YouWrote == "New York City") {var city = "JFK";}
+else if (YouWrote == "Boston") {var city = "BOS";}
+else if (YouWrote == "Seattle") {var city = "SEA";}
 else  {var city = "fail";}
 
-if (YouWrote1 == "San Francisco") {var city1 = "sf";}
-else if (YouWrote1 == "New York City") {var city1 = "nyc";}
-else if (YouWrote1 == "Boston") {var city1 = "bos";}
-else if (YouWrote1 == "Seattle") {var city1 = "sea";}
+if (YouWrote1 == "San Francisco") {var city1 = "SFO";}
+else if (YouWrote1 == "New York City") {var city1 = "JFK";}
+else if (YouWrote1 == "Boston") {var city1 = "BOS";}
+else if (YouWrote1 == "Seattle") {var city1 = "SEA";}
 else  {var city1 = "fail";}
 
 //document.getElementById("fill-this").innerHTML = city1;
@@ -200,24 +207,24 @@ o2:20,
 ret:"Sunday",
 r1:19,
 r2:21,
-home:"sf", 
-dest:"sea"}, {
+home:"SFO", 
+dest:"SEA"}, {
 outbound:"Friday",
 o1:20,
 o2:22,
 ret:"Sunday",
 r1:21,
 r2:23,
-home:"sf", 
-dest:"sea"},{
+home:"SFO", 
+dest:"SEA"},{
 outbound:"Friday",
 o1:22,
 o2:6,
 ret:"Monday",
 r1:7,
 r2:10,
-home:"sea", 
-dest:"nyc"}];
+home:"SEA", 
+dest:"JFK"}];
 
 
  //{} 16,7,9,18,7,9,"sf", "sea"],[ 16,7,9,18,19,21,"sf", "sea"],[ 16,10,12,18,19,21,"sf", "sea"],[ 15,7,15,17,18,21,"sf", "nyc"],[ 15,22,6,18,7,10,"sea", "nyc"], [ 15,22,6,18,18,21,"sea", "nyc"]];
@@ -237,6 +244,7 @@ for (i = 0; i < flights.length; i++) {
 		if (flights[i].o2 <= flights[i].o1) {var redeye = flights[i].outbound + " ";}
 		else {var redeye = "";}
 		document.getElementById("fill-this").innerHTML = flights[i].outbound + " from " + o1 + m1 + " - " + redeye + o2 + m2;
+		var wow = flights[i].outbound + " from " + o1 + m1 + " - " + redeye + o2 + m2;
 		if (flights[i].dest == city1) {
 			if (flights[i].r1 > 12) {var r1 = (flights[i].r1 - 12).toString() ; var m1 = "pm" ;}
 			else {var r1 = flights[i].r1.toString() ; var m1 = "am";}
