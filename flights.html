@@ -147,7 +147,7 @@ document.write("You Entered " +YouWrote1+ ".");
                                 <script>
                                 document.getElementById("fill-me2").innerHTML = YouWrote + " to " + YouWrote1;
                                 </script>
-                                  <p> Nunc pretium quis sapien eu rhoncus. Suspendisse ornare gravida mi, et placerat tellus tempor vitae.</p>
+                                  <p id="fill-this"> Nunc pretium quis sapien eu rhoncus. Suspendisse ornare gravida mi, et placerat tellus tempor vitae.</p>
                                 </div><!--end .accordion-section-content-->
                               </div><!--end .accordion-section-->
 
@@ -157,7 +157,7 @@ document.write("You Entered " +YouWrote1+ ".");
                                 <script>
                                 document.getElementById("fill-me-in2").innerHTML = YouWrote1 + " to " + YouWrote;
                                 </script>
-                                  <p>Mauris interdum fringilla augue vitae tincidunt. Curabitur vitae tortor id eros euismod ultrices. </p>
+                                  <p id="fill-this2">Mauris interdum fringilla augue vitae tincidunt. Curabitur vitae tortor id eros euismod ultrices. </p>
                                 </div><!--end .accordion-section-content-->
                               </div><!--end .accordion-section-->
                             </div><!--end .accordion-->
@@ -213,19 +213,16 @@ dest:"nyc"}];
 
 
  //{} 16,7,9,18,7,9,"sf", "sea"],[ 16,7,9,18,19,21,"sf", "sea"],[ 16,10,12,18,19,21,"sf", "sea"],[ 15,7,15,17,18,21,"sf", "nyc"],[ 15,22,6,18,7,10,"sea", "nyc"], [ 15,22,6,18,18,21,"sea", "nyc"]];
-document.write(flights[0].o2);
 //document.getElementById("fill-this2").innerHTML = flights[0].home;
 
-document.write(city1);
 
 
 for (i = 0; i < flights.length; i++) {
 	document.write(flights[i].home);
 	if (flights[i].home == city1) {
 		document.write(city1);
-		document.write(flights[i]);
+		document.getElementById("fill-this").innerHTML = "January " + flights[i].outbound + " at " + flights[i].o1 + "pm  - January" + flights[i].outbound + " at " + flights[i].o2 + "pm" ;
 	}
-	document.write("Takes off: January " + flights[i].outbound + " at " + flights[i].o1 + "o'clock \n"  );
 };
 
 
@@ -246,6 +243,8 @@ for (i = 0; i < flights.length; i++) {
 
 
 
+move into accordion
+time conversion from 22 to 10
 
 
 
