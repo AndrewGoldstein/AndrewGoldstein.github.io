@@ -98,9 +98,42 @@
 
                           <div class="main">
                             <div class="accordion">
+
+
+
+
                               <div class="accordion-section">
-                                <a id="fill-me-in" class="accordion-section-title" href="#accordion-1">Destination</a>
-                                <div id="accordion-1" class="accordion-section-content">
+                                <a id="fill-me" class="accordion-section-title" href="#accordion-4">Select your Home City</a>
+                                <div id="accordion-4" class="accordion-section-content">
+                                    <select id="item1" onChange="go(this.value)">
+                                      <option value="select">Select Your Home City!</option>
+                                      <option value="sf">San Francisco</option>
+                                      <option value="sea">Seattle</option>
+                                      <option value="nyc">New York</option>
+                                      <option value="bos">Boston</option>
+                                    </select>
+
+                                  <script>
+                                  function go(origin){
+                                      if (origin != ''){
+                                           console.log(origin);
+                                          document.getElementById("fill-me-in").innerHTML = origin;
+                                           console.log(origin);
+                                      }
+                                  }
+                                   </script>
+
+
+
+
+
+                                  <p>Mauris interdum fringilla augue vitae tincidunt. Curabitur vitae tortor id eros euismod ultrices. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent nulla mi, rutrum ut feugiat at, vestibulum ut neque? Cras tincidunt enim vel aliquet facilisis. Duis congue ullamcorper vehicula. Proin nunc lacus, semper sit amet elit sit amet, aliquet pulvinar erat. Nunc pretium quis sapien eu rhoncus. Suspendisse ornare gravida mi, et placerat tellus tempor vitae.</p>
+                                </div><!--end .accordion-section-content-->
+                              </div><!--end .accordion-section-->
+
+                              <div class="accordion-section">
+                                <a id="fill-me-in" class="accordion-section-title" href="#accordion-5">Select your Destination</a>
+                                <div id="accordion-5" class="accordion-section-content">
                                   <select id="item2" onChange="go1(this.value)">
                                     <option value="select">Destination</option>
                                     <option value="sf">San Francisco</option>
