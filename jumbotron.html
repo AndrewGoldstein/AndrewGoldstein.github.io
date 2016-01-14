@@ -73,10 +73,55 @@
 
 
 
+<SCRIPT LANGUAGE="JavaScript">
+
+cookie_name = "dataCookie";
+
+function putCookie(origin) {
+
+if(document.cookie != document.cookie) 
+{index = document.cookie.indexOf(cookie_name);}
+else 
+{ index = -1;}
+
+if (index == -1)
+{
+document.cookie=cookie_name+"="+origin+"; expires=Monday, 04-Apr-2020 05:00:00 GMT";
+}
+
+}
+
+</SCRIPT>
 
 
 
-        <h1>What are you doing this weekend?</h1>
+
+
+
+<SCRIPT LANGUAGE="JavaScript">
+
+cookie_name1 = "dataCookie1";
+
+function putCookie1(de) {
+
+if(document.cookie != document.cookie) 
+{index = document.cookie.indexOf(cookie_name1);}
+else 
+{ index = -1;}
+
+if (index == -1)
+{
+document.cookie=cookie_name1+"="+de+"; expires=Monday, 04-Apr-2020 05:00:00 GMT";
+}
+
+}
+
+</SCRIPT>
+
+
+
+
+        <h3>What are you doing this weekend?</h3>
         <p class="lead">Take a new adventure, visit a friend, hop on a romantic getaway. Sponteneity has reached new heights. Search last minute flight deals for this coming weekend!</p>
         <p>
 
@@ -102,7 +147,8 @@
                                   function go(origin){
                                       if (origin != ''){
                                            console.log(origin);
-                                          document.getElementById("fill-me").innerHTML = origin;
+                                           document.getElementById("fill-me").innerHTML = origin;
+                                           putCookie(origin);
                                            console.log(origin);
                                       }
                                   }
@@ -112,7 +158,7 @@
 
 
 
-                                  <p>Mauris interdum fringilla augue vitae tincidunt. Curabitur vitae tortor id eros euismod ultrices. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent nulla mi, rutrum ut feugiat at, vestibulum ut neque? Cras tincidunt enim vel aliquet facilisis. Duis congue ullamcorper vehicula. Proin nunc lacus, semper sit amet elit sit amet, aliquet pulvinar erat. Nunc pretium quis sapien eu rhoncus. Suspendisse ornare gravida mi, et placerat tellus tempor vitae.</p>
+                                  <p> Nunc pretium quis sapien eu rhoncus. Suspendisse ornare gravida mi, et placerat tellus tempor vitae.</p>
                                 </div><!--end .accordion-section-content-->
                               </div><!--end .accordion-section-->
 
@@ -133,6 +179,7 @@
                                                   if (destination != ''){
                                                        console.log(destination);
                                                        document.getElementById("fill-me-in").innerHTML = destination;
+                                                       putCookie1(destination);
                                                        console.log(destination);
                                                   }
                                               } 
@@ -179,7 +226,7 @@
       </div>
 
       <footer class="footer">
-        <p>&copy; 2015 Company, Inc.</p>
+        <p>&copy; 2015 Weekend Flyer, Inc.</p>
       </footer>
 
     </div> <!-- /container -->
