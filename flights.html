@@ -188,10 +188,10 @@ document.write(flights[0]);
 document.getElementById("fill-this2").innerHTML = flights[0].home;
 
 document.write(flights);
-for (each in flights) {
+for (i = 0; i < flights.length; i++) {
 	document.write(each);
 
-	document.write("Takes off: January " + each.outbound + " at " + each.o1 + "o'clock \n"  );
+	document.write("Takes off: January " + flights[i].outbound + " at " + flights[i].o1 + "o'clock \n"  );
 };
 /*for (each1 in flights) {
 	document.write(each1.home);
