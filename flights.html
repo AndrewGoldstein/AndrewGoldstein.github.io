@@ -118,14 +118,6 @@ if (YouWrote1 == "dataCookie1")
 
 
 
-<SCRIPT LANGUAGE="javascript">
-document.write("You Entered " +YouWrote+ ".");
-</SCRIPT>
-
-
-<SCRIPT LANGUAGE="javascript">
-document.write("You Entered " +YouWrote1+ ".");
-</SCRIPT>
 
 
         <h2>What are you doing this weekend?</h2>
@@ -136,14 +128,25 @@ document.write("You Entered " +YouWrote1+ ".");
 
           
 
-<script>
-var city;
 
-if (YouWrote == "San Francisco") {city = "sf";}
-else if (YouWrote == "New York City") {city = "nyc";}
-else if (YouWrote == "Boston") {city = "bos";}
-else if (YouWrote == "Seattle") {city = "sea";}
-else  {city = "fail";}
+
+
+<SCRIPT LANGUAGE="javascript">
+document.write("You Entered " +YouWrote+ ".");
+</SCRIPT>
+
+
+<SCRIPT LANGUAGE="javascript">
+document.write("You Entered " +YouWrote1+ ".");
+</SCRIPT>
+
+
+<script>
+if (YouWrote == "San Francisco") {var city = "sf";}
+else if (YouWrote == "New York City") {var city = "nyc";}
+else if (YouWrote == "Boston") {var city = "bos";}
+else if (YouWrote == "Seattle") {var city = "sea";}
+else  {var city = "fail";}
 
 
 document.getElementById("fill-this").innerHTML = city;
@@ -152,10 +155,10 @@ var flights =[[ 15,18,20,17,19,21,"sf", "sea"], [ 15,20,22,17,21,23,"sf", "sea"]
 document.write(flights[0]);
 document.getElementById("fill-this2").innerHTML = flights[0];
 
-//document.write(flights);
-//for (each in flights[0]) {
-//	document.write("Takes off: January " +each[0]+ " at " + each[1] + "o'clock"  );
-//}
+document.write(flights);
+for (each in flights[0]) {
+	document.write("Takes off: January " +each[0]+ " at " + each[1] + "o'clock"  );
+}
 
 
 </script>  
