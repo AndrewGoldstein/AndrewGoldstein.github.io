@@ -225,7 +225,7 @@ for (i = 0; i < flights.length; i++) {
 		else {var o1 = flights[i].o1.toString() ; var m1 = "am";}
 		if (flights[i].o2 > 12) {var o2 = (flights[i].o2 - 12).toString() ; var m2 = "pm" ;}
 		else {var o2 = flights[i].o2.toString() ; var m2 = "am";}
-		document.getElementById("fill-this").innerHTML = "January " + flights[i].outbound + " at " + o1 + m1 " -  + January" + flights[i].outbound + " at " + o2 + m2;
+		document.getElementById("fill-this").innerHTML = "January " + flights[i].outbound + " at " + o1 + m1 + " - January" + flights[i].outbound + " at " + o2 + m2;
 	}
 };
 
