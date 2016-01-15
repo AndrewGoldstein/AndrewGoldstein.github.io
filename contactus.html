@@ -159,6 +159,9 @@ var card = new Card({
       </footer>
 
     </div> <!-- /container -->
-
+    <script>
+        $('code').each(function(i, e) {hljs.highlightBlock(e)});
+        var card = new Card({ form: '.active form', container: '.card-wrapper' })
+    </script>
   </body>
 </html>
