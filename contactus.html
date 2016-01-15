@@ -55,32 +55,29 @@
 <div class='card-wrapper'></div>
 <script src="javascripts/card.js"></script>
 <form>
-    <input type="text" name="number">
-    <input type="text" name="first-name"/>
-    <input type="text" name="last-name"/>
+  <div class="row collapse">
+    <input placeholder="Card number" type="text" name="number">
+    <input type="First Name" name="first-name"/>
+    <input type="Last Name" name="last-name"/>
     <input placeholder="MM/YY" type="text" name="expiry">
-    <input type="text" name="cvc"/>
-                    <div class="row collapse">
+  </div>
+  <div class="row collapse">
+    <input placeholder="CVC" type="text" name="cvc">
+    <input type="submit" value="Submit" class="button postfix">
+  </div>              
+
+
+                        <!--<div class="small-6 columns">
+            
                         <div class="small-6 columns">
-                            <input placeholder="Card number" type="text" name="number">
-                        </div>
-                        <div class="small-6 columns">
-                            <input placeholder="Full name" type="text" name="name">
-                        </div>
-                    </div>
-                    <div class="row collapse">
+              
                         <div class="small-3 columns">
-                            <input placeholder="MM/YY" type="text" name="expiry">
-                        </div>
+                       
 
                         <div class="small-3 columns">
-                            <input placeholder="CVC" type="text" name="cvc">
-                        </div>
-
-                        <div class="small-6 columns">
-                            <input type="submit" value="Submit" class="button postfix">
-                        </div>
-                    </div>
+                  
+                        <div class="small-6 columns">-->
+                 
 </form>
 <script>
 var card = new Card({
