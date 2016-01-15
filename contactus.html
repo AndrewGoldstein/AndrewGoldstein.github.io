@@ -54,13 +54,29 @@
 
 <div class='card-wrapper'></div>
 <script src="javascripts/card.js"></script>
-<form>
-    <input type="text" name="number">
-    <input type="text" name="first-name"/>
-    <input type="text" name="last-name"/>
-    <input type="text" name="expiry"/>
-    <input type="text" name="cvc"/>
-</form>
+<form action="">
+                    <div class="row collapse">
+                        <div class="small-6 columns">
+                            <input placeholder="Card number" type="text" name="number">
+                        </div>
+                        <div class="small-6 columns">
+                            <input placeholder="Full name" type="text" name="name">
+                        </div>
+                    </div>
+                    <div class="row collapse">
+                        <div class="small-3 columns">
+                            <input placeholder="MM/YY" type="text" name="expiry">
+                        </div>
+
+                        <div class="small-3 columns">
+                            <input placeholder="CVC" type="text" name="cvc">
+                        </div>
+
+                        <div class="small-6 columns">
+                            <input type="submit" value="Submit" class="button postfix">
+                        </div>
+                    </div>
+                </form>
 <script>
 var card = new Card({
     form: 'form',
@@ -71,6 +87,38 @@ var card = new Card({
     }
 });
 </script>
+
+          <div class="demo-container">
+            <h1>Before <small>(boring, painful)</small></h1>
+            <div class="form-container">
+                <form action="">
+                    <div class="row collapse">
+                        <div class="small-6 columns">
+                            <input placeholder="Card number" type="text" name="number">
+                        </div>
+                        <div class="small-6 columns">
+                            <input placeholder="Full name" type="text" name="name">
+                        </div>
+                    </div>
+                    <div class="row collapse">
+                        <div class="small-3 columns">
+                            <input placeholder="MM/YY" type="text" name="expiry">
+                        </div>
+
+                        <div class="small-3 columns">
+                            <input placeholder="CVC" type="text" name="cvc">
+                        </div>
+
+                        <div class="small-6 columns">
+                            <input type="submit" value="Submit" class="button postfix">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+
+
 
 
         </div>
