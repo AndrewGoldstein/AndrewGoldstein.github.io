@@ -1608,7 +1608,6 @@ QJ.removeClass = function(el, className) {
   }
 };
 
-
 QJ.toggleClass = function(el, className, bool) {
   var e;
   if (el.length) {
