@@ -277,7 +277,7 @@ for (i = 0; i < flights.length; i++) {
                                   var input = ["hello","kiwi","tomato"];
                                   var div = document.createElement('div');
                                   for (var i = 0, l = input.length; i < l; ++i) {
-                                      div.innerHTML += input[i] + "<br />";
+                                      div.innerHTML += '<span>'+ input[i] + '</span> <a class="btn btn-sm btn-success" onclick="myFunction1()" role="button">Select</a><br />';
                                   }
                                   document.body.appendChild(div);
 
