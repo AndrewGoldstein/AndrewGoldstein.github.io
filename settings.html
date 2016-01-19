@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Weekend Flyer</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="jumbotron_narrow.css" rel="stylesheet">
+    
+    <link rel="stylesheet" type="text/css" href="accordion_demo.css">
+    <!--<link rel="stylesheet" href="creditcard_demo.css">-->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript" src="javascripts/accordion.js"></script>
+    <script src="javascripts/card.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+      <div class="header clearfix">
+        <nav>
+          <ul class="nav nav-pills pull-right">
+            <li role="presentation"><a href="jumbotron.html">Home</a></li>
+            <li role="presentation"><a href="#">About</a></li>
+            <li role="presentation" class="active"><a href="contactus.html">Contact</a></li>
+          </ul>
+        </nav>
+        <h3 class="text-muted">Weekend Flyer</h3>
+      </div>
+
+      <div class="jumbotron">
+
+
+
+
+        <h2>Get in Touch</h2>
+        
+
+<div class='card-wrapper'></div>
+<script src="javascripts/card.js"></script>
+<form>
+<div class="small-6 columns">
+    <p line-height= ".5em"> </p>
+
+    <input placeholder="Card number" type="text" name="number"><br>
+      
+    <p line-height= ".3em"> </p>
+
+    <input placeholder="First Name" type="text" name="first-name"/><br>
+    <p line-height= ".3em"> </p>
+    <input placeholder="Last Name" type="text" name="last-name"/><br>
+        <p line-height= ".3em"> </p>
+
+    </div>
+    <input placeholder="MM/YY" type="text" name="expiry"><br>
+        <p line-height= ".3em"> </p>
+
+    <input placeholder="CVC" type="text" name="cvc"><br>
+        <p line-height= ".3em"> </p>
+
+    <input type="submit" value="Submit" class="button postfix">
+
+
+                        <!--<div class="small-6 columns">
+            
+                        <div class="small-6 columns">
+              
+                        <div class="small-3 columns">
+                       
+
+                        <div class="small-3 columns">
+                  
+                        <div class="small-6 columns">-->
+                 
+</form>
+<script>
+var card = new Card({
+    form: 'form',
+    container: '.card-wrapper',
+
+    formSelectors: {
+        nameInput: 'input[name="first-name"], input[name="last-name"]'
+    }
+});
+</script>
+
+
+      </div>
+
+      
+
+      <footer class="footer">
+        <p>&copy; 2015 Weekend Flyer, Inc.</p>
+      </footer>
+
+    </div> <!-- /container -->
+<script src="javascripts/card.js"></script>
+  </body>
+</html>
