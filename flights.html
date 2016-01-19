@@ -117,9 +117,6 @@ if (YouWrote1 == "dataCookie1")
 
 
 
-
-
-
         <h2 id="hello"></h2>
                                 <script>
                                 document.getElementById("hello").innerHTML = "Select your flights to " + YouWrote1;
@@ -276,6 +273,14 @@ for (i = 0; i < flights.length; i++) {
 		}
 	}
 };
+
+                                  var input = ["hello","kiwi","tomato"]
+                                  var div = document.createElement('div');
+                                  for (var i = 0, l = input.length; i < l; ++i) {
+                                      div.innerHTML += input[i] + "<br />";
+                                  }
+                                  document.body.appendChild(div);
+
 
 
 </script>  
