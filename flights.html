@@ -242,7 +242,7 @@ dest:"JFK"}];
 
 
 for (i = 0; i < flights.length; i++) {
-	
+	var input = ["hello","kiwi","tomato"];
 	//document.write(flights[i].home);
 	if (flights[i].home == city) {
 		//document.write(city);
@@ -259,7 +259,6 @@ for (i = 0; i < flights.length; i++) {
 			} 
 		}
 		else {var redeye = "";}
-                                      var input = ["hello","kiwi","tomato"];
 
     input.push(flights[i].outbound + " from " + o1 + m1 + " - " + redeye + o2 + m2);
     document.write(i);
