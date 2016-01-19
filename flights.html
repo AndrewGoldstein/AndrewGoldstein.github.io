@@ -170,8 +170,8 @@ else  {var city1 = "fail";}
                                 close_accordion_section();
                                 }
                          
-                                function myFunction1() {
-                                document.getElementById("fill-me-in2").innerHTML = "(" +city1 +" to "+ city+ ")     "  + hello;
+                                function myFunction1(a) {
+                                document.getElementById("fill-me-in2").innerHTML = "(" +city1 +" to "+ city+ ")     "  + output[a];
                                 close_accordion_section();
                                 }
                                 </script>
@@ -220,6 +220,7 @@ dest:"JFK"}];
  //{} 16,7,9,18,7,9,"sf", "sea"],[ 16,7,9,18,19,21,"sf", "sea"],[ 16,10,12,18,19,21,"sf", "sea"],[ 15,7,15,17,18,21,"sf", "nyc"],[ 15,22,6,18,7,10,"sea", "nyc"], [ 15,22,6,18,18,21,"sea", "nyc"]];
 //document.getElementById("fill-this2").innerHTML = flights[0].home;  lots of flights, list of flights, credit card page
 var input = [];
+var output = [];
 for (i = 0; i < flights.length; i++) {
   //document.write(flights[i].home);
   if (flights[i].home == city) {
@@ -252,8 +253,10 @@ for (i = 0; i < flights.length; i++) {
       else {var r2 = flights[i].r2.toString() ; var m2 = "am";}
       if (flights[i].r2 <= flights[i].r1) {var redeye = flights[i].ret + " ";}
       else {var redeye = "";}
-      document.getElementById("fill-this2").innerHTML = flights[i].ret + " from " + r1 + m1 + " - " + redeye + r2 + m2;
-      var hello = flights[i].ret + " from " + r1 + m1 + " - " + redeye + r2 + m2;
+      output.push(flights[i].ret + " from " + r1 + m1 + " - " + redeye + r2 + m2);
+
+      //document.getElementById("fill-this2").innerHTML = flights[i].ret + " from " + r1 + m1 + " - " + redeye + r2 + m2;
+      //var hello = flights[i].ret + " from " + r1 + m1 + " - " + redeye + r2 + m2;
     }
   
     /*for (var i = 0, l = input.length; i < l; ++i) {
@@ -264,6 +267,9 @@ for (i = 0; i < flights.length; i++) {
 };
   for (var i = 0, l = input.length; i < l; ++i) {
                                       document.getElementById('fill-this').innerHTML += '<span>'+ input[i] + '</span> <a class="btn btn-sm btn-success" onclick="myFunction('+i.toString()+')" role="button">Select</a><br />';
+                                  };
+  for (var i = 0, l = output.length; i < l; ++i) {
+                                      document.getElementById('fill-this2').innerHTML += '<span>'+ input[i] + '</span> <a class="btn btn-sm btn-success" onclick="myFunction1('+i.toString()+')" role="button">Select</a><br />';
                                   };
 </script>  
 
