@@ -189,7 +189,7 @@ else  {var city1 = "fail";}
                                 }
                                 
                                 function myFunction1() {
-                                document.getElementById('fill-this').innerHTML
+                                //document.getElementById('fill-this').innerHTML
                                 document.getElementById("fill-me-in2").innerHTML = "(" +city1 +" to "+ city+ ")     "  + hello;
                                 close_accordion_section();
                                 }
@@ -295,10 +295,10 @@ for (i = 0; i < flights.length; i++) {
     }*/
     
   }
-};
+}
   for (var i = 0, l = input.length; i < l; ++i) {
-                                      document.getElementById('fill-this').innerHTML += '<span>'+ input[i] + '</span> <a class="btn btn-sm btn-success" onclick="outbound'+ i.toString() +  '()" role="button">Select</a><br />';
-                                  }
+    document.getElementById('fill-this').innerHTML += '<span>'+ input[i] + '</span> <a class="btn btn-sm btn-success" onclick="outbound' + i.toString() +  '()" role="button">Select</a><br />';
+  }
 
 
 
