@@ -240,12 +240,12 @@ dest:"JFK"}];
 //document.getElementById("fill-this2").innerHTML = flights[0].home;  lots of flights, list of flights, credit card page
 
 
-var input = ["hello","kiwi","tomato"];
+var input = [];
 
 for (i = 0; i < flights.length; i++) {
-	document.write(flights[i].home);
+	//document.write(flights[i].home);
 	if (flights[i].home == city) {
-		document.write(city);
+		//document.write(city);
 		if (flights[i].o1 > 12) {var o1 = (flights[i].o1 - 12).toString() ; var m1 = "pm" ;}
 		else {var o1 = flights[i].o1.toString() ; var m1 = "am";}
 		if (flights[i].o2 > 12) {var o2 = (flights[i].o2 - 12).toString() ; var m2 = "pm" ;}
@@ -262,8 +262,8 @@ for (i = 0; i < flights.length; i++) {
 		else {var redeye = "";}
 
     input.push(flights[i].outbound + " from " + o1 + m1 + " - " + redeye + o2 + m2);
-    document.write(i);
-    document.write(input);
+    //document.write(i);
+    //document.write(input);
 
                                   
     //document.getElementById("fill-this").innerHTML = flights[i].outbound + " from " + o1 + m1 + " - " + redeye + o2 + m2;
