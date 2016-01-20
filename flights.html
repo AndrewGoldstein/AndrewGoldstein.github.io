@@ -204,11 +204,11 @@ var input = [];
 var output = [];
 
 
-
+flights = flights_new
 
 for (i = 0; i < flights.length; i++) {
   //document.write(flights[i].home);
-  if (flights[i].home == city) {
+  if (flights[i].home == city && flights[i].dest == city1 && (fights[i].outbound == "Friday" || fights[i].outbound == "Saturday" )) {
     //document.write(city);
     if (flights[i].o1 > 12) {var o1 = (flights[i].o1 - 12).toString() ; var m1 = "pm" ;}
     else {var o1 = flights[i].o1.toString() ; var m1 = "am";}
@@ -225,11 +225,30 @@ for (i = 0; i < flights.length; i++) {
     }
     else {var redeye = "";}
     input.push(flights[i].outbound + " from " + o1 + m1 + " - " + redeye + o2 + m2);
-    //document.write(i);
-    //document.write(input);
+
+  if (flights[i].home == city1 && flights[i].dest == city && (fights[i].outbound == "Sunday" || fights[i].outbound == "Monday" )) {
+    //document.write(city1);
+    if (flights[i].o1 > 12) {var o1 = (flights[i].o1 - 12).toString() ; var m1 = "pm" ;}
+    else {var o1 = flights[i].o1.toString() ; var m1 = "am";}
+    if (flights[i].o2 > 12) {var o2 = (flights[i].o2 - 12).toString() ; var m2 = "pm" ;}
+    else {var o2 = flights[i].o2.toString() ; var m2 = "am";}
+    if (flights[i].o2 <= flights[i].o1) {
+      if (flights[i].outbound == "Friday") {
+      var redeye = " (Sat) ";
+      } 
+      else if (flights[i].outbound == "Thursday") {
+      var redeye = " (Fri) ";
+      } 
+      else {var redeye = "";}
+    }
+    else {var redeye = "";}
+    output.push(flights[i].outbound + " from " + o1 + m1 + " - " + redeye + o2 + m2);
+
                                   
     //document.getElementById("fill-this").innerHTML = flights[i].outbound + " from " + o1 + m1 + " - " + redeye + o2 + m2;
     
+
+    /*
     var wow = flights[i].outbound + " from " + o1 + m1 + " - " + redeye + o2 + m2;
     if (flights[i].dest == city1) {
       if (flights[i].r1 > 12) {var r1 = (flights[i].r1 - 12).toString() ; var m1 = "pm" ;}
@@ -243,11 +262,10 @@ for (i = 0; i < flights.length; i++) {
       //document.getElementById("fill-this2").innerHTML = flights[i].ret + " from " + r1 + m1 + " - " + redeye + r2 + m2;
       var hello = flights[i].ret + " from " + r1 + m1 + " - " + redeye + r2 + m2;
     }
-  
-    /*for (var i = 0, l = input.length; i < l; ++i) {
-      document.getElementById('fill-this').innerHTML += '<span>'+ input[i] + '</span> <a class="btn btn-sm btn-success" onclick="myFunction1()" role="button">Select</a><br />';
-    }*/
-    
+    */
+
+
+
   }
 };
   for (var i = 0, l = input.length; i < l; ++i) {
