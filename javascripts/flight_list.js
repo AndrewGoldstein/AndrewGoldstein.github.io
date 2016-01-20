@@ -48,8 +48,8 @@ home:"SFO",
 dest:"SEA"
 },{
 outbound:"Sunday",
-r1:21,
-r2:23,
+o1:21,
+o2:23,
 home:"SEA", 
 dest:"SFO"
 },{
