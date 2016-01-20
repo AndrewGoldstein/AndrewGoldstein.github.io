@@ -29,11 +29,11 @@ dest:"JFK"}];
 
 var flights_new =[
 {
-outbound:"Friday",
-o1:18,
-o2:20,
-home:"SFO", 
-dest:"SEA"
+'outbound':"Friday",
+'o1':18,
+'o2':20,
+'home':"SFO", 
+'dest':"SEA"
 },{
 outbound:"Sunday",
 o1:19,
