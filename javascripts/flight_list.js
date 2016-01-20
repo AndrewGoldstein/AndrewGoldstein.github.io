@@ -21,7 +21,7 @@ r2:21
 
 home:"SFO"
 ,
- 
+
 dest:"SEA"}
 ,
  {
@@ -45,7 +45,7 @@ r2:23
 
 home:"SFO"
 ,
- 
+
 dest:"SEA"}
 ,
 {
@@ -69,104 +69,104 @@ r2:10
 
 home:"SEA"
 ,
- 
+
 dest:"JFK"}];
 
 
 var flights_old =[
 {
-'outbound':"Friday"
+'departureWeekday':"Friday"
 ,
 
-'o1':18
+'h1':18
 ,
 
-'o2':20
+'h2':20
 ,
 
 'home':"SFO"
 ,
- 
+
 'dest':"SEA"
 }
 ,
 {
-outbound:"Sunday"
+departureWeekday:"Sunday"
 ,
 
-o1:19
+h1:19
 ,
 
-o2:21
+h2:21
 ,
 
 home:"SEA"
 ,
- 
+
 dest:"SFO"
 }
 ,
 {
-outbound:"Friday"
+departureWeekday:"Friday"
 ,
 
-o1:20
+h1:20
 ,
 
-o2:22
+h2:22
 ,
 
 home:"SFO"
 ,
- 
+
 dest:"SEA"
 }
 ,
 {
-outbound:"Sunday"
+departureWeekday:"Sunday"
 ,
 
-o1:21
+h1:21
 ,
 
-o2:23
+h2:23
 ,
 
 home:"SEA"
 ,
- 
+
 dest:"SFO"
 }
 ,
 {
-outbound:"Friday"
+departureWeekday:"Friday"
 ,
 
-o1:22
+h1:22
 ,
 
-o2:6
+h2:6
 ,
 
 home:"SEA"
 ,
- 
+
 dest:"JFK"
 }
 ,
 {
-outbound:"Monday"
+departureWeekday:"Monday"
 ,
 
-o1:7
+h1:7
 ,
 
-o2:10
+h2:10
 ,
 
 home:'JFK'
 ,
- 
+
 dest:"SEA"
 }
 ];
