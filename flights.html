@@ -20,7 +20,8 @@
 
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script type="text/javascript" src="javascripts/accordion.js"></script>
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <script type="text/javascript" src="javascripts/flight_list.js"></script>
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -195,36 +196,16 @@ else if (YouWrote1 == "Boston") {var city1 = "BOS";}
 else if (YouWrote1 == "Seattle") {var city1 = "SEA";}
 else  {var city1 = "fail";}
 //document.getElementById("fill-this").innerHTML = city1;
-var flights =[
-{outbound:"Friday",
-o1:18,
-o2:20,
-ret:"Sunday",
-r1:19,
-r2:21,
-home:"SFO", 
-dest:"SEA"}, {
-outbound:"Friday",
-o1:20,
-o2:22,
-ret:"Sunday",
-r1:21,
-r2:23,
-home:"SFO", 
-dest:"SEA"},{
-outbound:"Friday",
-o1:22,
-o2:6,
-ret:"Monday",
-r1:7,
-r2:10,
-home:"SEA", 
-dest:"JFK"}];
+
 //var days_of_week = ["Wednesday", "Thursday", "Friday","Saturday","Sunday","Monday","Tuesday"]
  //{} 16,7,9,18,7,9,"sf", "sea"],[ 16,7,9,18,19,21,"sf", "sea"],[ 16,10,12,18,19,21,"sf", "sea"],[ 15,7,15,17,18,21,"sf", "nyc"],[ 15,22,6,18,7,10,"sea", "nyc"], [ 15,22,6,18,18,21,"sea", "nyc"]];
 //document.getElementById("fill-this2").innerHTML = flights[0].home;  lots of flights, list of flights, credit card page
 var input = [];
 var output = [];
+
+
+
+
 for (i = 0; i < flights.length; i++) {
   //document.write(flights[i].home);
   if (flights[i].home == city) {
