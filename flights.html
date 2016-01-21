@@ -269,9 +269,11 @@ for (i = 0; i < flights.length; i++) {
   
 };
 
+    <a class="btn btn-xs btn-success" href="#">Approve</a>
+</span>
 
 for (var i = 0, l = input.length; i < l; ++i) {
-                                      document.getElementById('fill-this').innerHTML += '<span>'+ input[i] + '</span> <a class="btn btn-primary btn-xs" onclick="myFunction('+i.toString()+')" type="button">Select</a><br />';
+                                      document.getElementById('fill-this').innerHTML += '<span>'+ input[i] + '</span> <span class="btn-group"><a class="btn btn-xs btn-primary" onclick="myFunction('+i.toString()+')" type="button">Select</a></span><br />';
                                   };
 for (var i = 0, l = output.length; i < l; ++i) {
                                       document.getElementById('fill-this2').innerHTML += '<span>'+ output[i] + '</span> <button class="btn btn-xs btn-primary" onclick="myFunction1('+i.toString()+')" type="button">Select</button><br />';
