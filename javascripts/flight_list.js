@@ -78,10 +78,10 @@ var flights_old =[
 'departureWeekday':"Friday"
 ,
 
-'h1':18
+'h0':18
 ,
 
-'h2':20
+'h1':20
 ,
 
 'home':"SFO"
@@ -94,10 +94,10 @@ var flights_old =[
 departureWeekday:"Sunday"
 ,
 
-h1:19
+h0:19
 ,
 
-h2:21
+h1:21
 ,
 
 home:"SEA"
@@ -110,10 +110,10 @@ dest:"SFO"
 departureWeekday:"Friday"
 ,
 
-h1:20
+h0:20
 ,
 
-h2:22
+h1:22
 ,
 
 home:"SFO"
@@ -126,10 +126,10 @@ dest:"SEA"
 departureWeekday:"Sunday"
 ,
 
-h1:21
+h0:21
 ,
 
-h2:23
+h1:23
 ,
 
 home:"SEA"
@@ -142,10 +142,10 @@ dest:"SFO"
 departureWeekday:"Friday"
 ,
 
-h1:22
+h0:22
 ,
 
-h2:6
+h1:6
 ,
 
 home:"SEA"
@@ -158,10 +158,10 @@ dest:"JFK"
 departureWeekday:"Monday"
 ,
 
-h1:7
+h0:7
 ,
 
-h2:10
+h1:10
 ,
 
 home:'JFK'
@@ -172,7 +172,8 @@ dest:"SEA"
 ];
 
 var flights_new = 
-[{'dest': 'JFK',
+[
+{'dest': 'JFK',
  'h0': 11,
  'h1': 20,
  'departureWeekday': 'Friday',
