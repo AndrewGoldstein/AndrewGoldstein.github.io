@@ -209,7 +209,7 @@ for (i = 0; i < flights.length; i++) {
       else {var redeye = "";}
     }
     else {var redeye = "";}
-    input.push(flights[i].departureWeekday + " " + h0 + m3 + " - " + redeye + h1 + m4);
+    input.push(flights[i].departureWeekday + " " + h0 + ":" + flights[i].m0 + m3 + " - " + redeye + h1 + ":" + flights[i].m1 + m4);
   }
   if (flights[i].home == city1 && flights[i].dest == city && (flights[i].departureWeekday == "Sunday" || flights[i].departureWeekday == "Monday" )) {
     if (flights[i].h0 > 12) {var h0 = (flights[i].h0 - 12).toString() ; var m3 = "pm" ;}
@@ -226,7 +226,7 @@ for (i = 0; i < flights.length; i++) {
       else {var redeye = "";}
     }
     else {var redeye = "";}
-    output.push(flights[i].departureWeekday + " " + h0 + m3 + " - " + redeye + h1 + m4);
+    output.push(flights[i].departureWeekday + " " + h0 + ":" + flights[i].m0 + m3 + " - " + redeye + h1 + ":" + flights[i].m1 + m4);
   }                            
   
 };
