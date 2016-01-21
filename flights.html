@@ -114,14 +114,7 @@ if (YouWrote1 == "dataCookie1")
                                 </script>
 
 
-<!--
-<SCRIPT LANGUAGE="javascript">
-document.write("You Entered " +YouWrote+ ".");
-</SCRIPT>
-<SCRIPT LANGUAGE="javascript">
-document.write("You Entered " +YouWrote1+ ".");
-</SCRIPT>
--->
+
 
 
                           <div class="main">
@@ -185,7 +178,7 @@ else  {var city1 = "fail";}
 
 
 <script>
-                  if (YouWrote == "San Francisco") {var city = "SFO";}
+if (YouWrote == "San Francisco") {var city = "SFO";}
 else if (YouWrote == "New York City") {var city = "JFK";}
 else if (YouWrote == "Boston") {var city = "BOS";}
 else if (YouWrote == "Seattle") {var city = "SEA";}
@@ -195,21 +188,13 @@ else if (YouWrote1 == "New York City") {var city1 = "JFK";}
 else if (YouWrote1 == "Boston") {var city1 = "BOS";}
 else if (YouWrote1 == "Seattle") {var city1 = "SEA";}
 else  {var city1 = "fail";}
-//document.getElementById("fill-this").innerHTML = city1;
 
-//var days_of_week = ["Wednesday", "Thursday", "Friday","Saturday","Sunday","Monday","Tuesday"]
- //{} 16,7,9,18,7,9,"sf", "sea"],[ 16,7,9,18,19,21,"sf", "sea"],[ 16,10,12,18,19,21,"sf", "sea"],[ 15,7,15,17,18,21,"sf", "nyc"],[ 15,22,6,18,7,10,"sea", "nyc"], [ 15,22,6,18,18,21,"sea", "nyc"]];
-//document.getElementById("fill-this2").innerHTML = flights[0].home;  lots of flights, list of flights, credit card page
 var input = [];
 var output = [];
 
 
-flights = flights_new
-
 for (i = 0; i < flights.length; i++) {
-  //document.write(flights[i].home);
   if (flights[i].home == city && flights[i].dest == city1 && (flights[i].departureWeekday == "Friday" || flights[i].departureWeekday == "Saturday" )) {
-    //document.write(city);
     if (flights[i].h0 > 12) {var h0 = (flights[i].h0 - 12).toString() ; var m3 = "pm" ;}
     else {var h0 = flights[i].h0.toString() ; var m3 = "am";}
     if (flights[i].h1 > 12) {var h1 = (flights[i].h1 - 12).toString() ; var m4 = "pm" ;}
@@ -227,7 +212,6 @@ for (i = 0; i < flights.length; i++) {
     input.push(flights[i].departureWeekday + " " + h0 + m3 + " - " + redeye + h1 + m4);
   }
   if (flights[i].home == city1 && flights[i].dest == city && (flights[i].departureWeekday == "Sunday" || flights[i].departureWeekday == "Monday" )) {
-    //document.write(city1);
     if (flights[i].h0 > 12) {var h0 = (flights[i].h0 - 12).toString() ; var m3 = "pm" ;}
     else {var h0 = flights[i].h0.toString() ; var m3 = "am";}
     if (flights[i].h1 > 12) {var h1 = (flights[i].h1 - 12).toString() ; var m4 = "pm" ;}
@@ -243,29 +227,7 @@ for (i = 0; i < flights.length; i++) {
     }
     else {var redeye = "";}
     output.push(flights[i].departureWeekday + " " + h0 + m3 + " - " + redeye + h1 + m4);
-  }
-                                  
-    //document.getElementById("fill-this").innerHTML = flights[i].outbound + " from " + o1 + m1 + " - " + redeye + o2 + m2;
-    
-
-    /*
-    var wow = flights[i].outbound + " from " + o1 + m1 + " - " + redeye + o2 + m2;
-    if (flights[i].dest == city1) {
-      if (flights[i].r1 > 12) {var r1 = (flights[i].r1 - 12).toString() ; var m1 = "pm" ;}
-      else {var r1 = flights[i].r1.toString() ; var m1 = "am";}
-      if (flights[i].r2 > 12) {var r2 = (flights[i].r2 - 12).toString() ; var m2 = "pm" ;}
-      else {var r2 = flights[i].r2.toString() ; var m2 = "am";}
-      if (flights[i].r2 <= flights[i].r1) {var redeye = flights[i].ret + " ";}
-      else {var redeye = "";}
-      output.push(flights[i].ret + " from " + r1 + m1 + " - " + redeye + r2 + m2);
-
-      //document.getElementById("fill-this2").innerHTML = flights[i].ret + " from " + r1 + m1 + " - " + redeye + r2 + m2;
-      var hello = flights[i].ret + " from " + r1 + m1 + " - " + redeye + r2 + m2;
-    }
-    */
-
-
-
+  }                            
   
 };
 
@@ -292,31 +254,3 @@ for (var i = 0, l = output.length; i < l; ++i) {
 
   </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

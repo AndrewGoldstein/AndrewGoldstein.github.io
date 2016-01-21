@@ -1,229 +1,4 @@
-//flight list
-/*
-var flights_oldest =[
-{outbound:"Friday"
-,
-
-
-o1:18
-,
-
-
-o2:20
-,
-
-
-ret:"Sunday"
-,
-
-
-r1:19
-,
-
-
-r2:21
-,
-
-
-home:"SFO"
-,
-
-
-dest:"SEA"}
-,
-
- {
-outbound:"Friday"
-,
-
-
-o1:20
-,
-
-
-o2:22
-,
-
-
-ret:"Sunday"
-,
-
-
-r1:21
-,
-
-
-r2:23
-,
-
-
-home:"SFO"
-,
-
-
-dest:"SEA"}
-,
-
-{
-outbound:"Friday"
-,
-
-
-o1:22
-,
-
-
-o2:6
-,
-
-
-ret:"Monday"
-,
-
-
-r1:7
-,
-
-
-r2:10
-,
-
-
-home:"SEA"
-,
-
-
-dest:"JFK"}];
-
-
-var flights_old =[
-{
-'departureWeekday':"Friday"
-,
-
-
-'h0':18
-,
-
-
-'h1':20
-,
-
-
-'home':"SFO"
-,
-
-
-'dest':"SEA"
-}
-,
-
-{
-departureWeekday:"Sunday"
-,
-
-
-h0:19
-,
-
-
-h1:21
-,
-
-
-home:"SEA"
-,
-
-
-dest:"SFO"
-}
-,
-
-{
-departureWeekday:"Friday"
-,
-
-
-h0:20
-,
-
-
-h1:22
-,
-
-
-home:"SFO"
-,
-
-
-dest:"SEA"
-}
-,
-
-{
-departureWeekday:"Sunday"
-,
-
-
-h0:21
-,
-
-
-h1:23
-,
-
-
-home:"SEA"
-,
-
-
-dest:"SFO"
-}
-,
-
-{
-departureWeekday:"Friday"
-,
-
-
-h0:22
-,
-
-
-h1:6
-,
-
-
-home:"SEA"
-,
-
-
-dest:"JFK"
-}
-,
-
-{
-departureWeekday:"Monday"
-,
-
-
-h0:7
-,
-
-
-h1:10
-,
-
-
-home:'JFK'
-,
-
-
-dest:"SEA"
-}
-];
-*/
-var flights_new = 
+var flights = 
 [{'dest': 'JFK',
  'h0': 11,
  'h1': 20,
@@ -1917,4 +1692,389 @@ var flights_new =
  'departureDate': '2016-02-02',
  'arrivalWeekday': 'Tuesday',
  'home': 'BOS',
- 'm0': 5}]
+ 'm0': 5},
+ {'dest': 'BOS',
+ 'h0': 13,
+ 'h1': 21,
+ 'departureWeekday': 'Friday',
+ 'arrivalDate': '2016-01-29',
+ 'carrier': 'B6',
+ 'm1': 10,
+ 'departureDate': '2016-01-29',
+ 'arrivalWeekday': 'Friday',
+ 'home': 'SEA',
+ 'm0': 10},
+ {'dest': 'BOS',
+ 'h0': 23,
+ 'h1': 7,
+ 'departureWeekday': 'Friday',
+ 'arrivalDate': '2016-01-30',
+ 'carrier': 'B6',
+ 'm1': 45,
+ 'departureDate': '2016-01-29',
+ 'arrivalWeekday': 'Saturday',
+ 'home': 'SEA',
+ 'm0': 40},
+ {'dest': 'BOS',
+ 'h0': 21,
+ 'h1': 5,
+ 'departureWeekday': 'Friday',
+ 'arrivalDate': '2016-01-30',
+ 'carrier': 'AS',
+ 'm1': 40,
+ 'departureDate': '2016-01-29',
+ 'arrivalWeekday': 'Saturday',
+ 'home': 'SEA',
+ 'm0': 25},
+ {'dest': 'BOS',
+ 'h0': 9,
+ 'h1': 17,
+ 'departureWeekday': 'Friday',
+ 'arrivalDate': '2016-01-29',
+ 'carrier': 'AS',
+ 'm1': 40,
+ 'departureDate': '2016-01-29',
+ 'arrivalWeekday': 'Friday',
+ 'home': 'SEA',
+ 'm0': 25},
+ {'dest': 'BOS',
+ 'h0': 23,
+ 'h1': 7,
+ 'departureWeekday': 'Saturday',
+ 'arrivalDate': '2016-01-31',
+ 'carrier': 'B6',
+ 'm1': 45,
+ 'departureDate': '2016-01-30',
+ 'arrivalWeekday': 'Sunday',
+ 'home': 'SEA',
+ 'm0': 40},
+ {'dest': 'BOS',
+ 'h0': 9,
+ 'h1': 17,
+ 'departureWeekday': 'Saturday',
+ 'arrivalDate': '2016-01-30',
+ 'carrier': 'AS',
+ 'm1': 40,
+ 'departureDate': '2016-01-30',
+ 'arrivalWeekday': 'Saturday',
+ 'home': 'SEA',
+ 'm0': 25},
+ {'dest': 'BOS',
+ 'h0': 13,
+ 'h1': 21,
+ 'departureWeekday': 'Sunday',
+ 'arrivalDate': '2016-01-31',
+ 'carrier': 'B6',
+ 'm1': 10,
+ 'departureDate': '2016-01-31',
+ 'arrivalWeekday': 'Sunday',
+ 'home': 'SEA',
+ 'm0': 10},
+ {'dest': 'BOS',
+ 'h0': 21,
+ 'h1': 5,
+ 'departureWeekday': 'Sunday',
+ 'arrivalDate': '2016-02-01',
+ 'carrier': 'AS',
+ 'm1': 40,
+ 'departureDate': '2016-01-31',
+ 'arrivalWeekday': 'Monday',
+ 'home': 'SEA',
+ 'm0': 25},
+ {'dest': 'BOS',
+ 'h0': 23,
+ 'h1': 7,
+ 'departureWeekday': 'Sunday',
+ 'arrivalDate': '2016-02-01',
+ 'carrier': 'B6',
+ 'm1': 45,
+ 'departureDate': '2016-01-31',
+ 'arrivalWeekday': 'Monday',
+ 'home': 'SEA',
+ 'm0': 40},
+ {'dest': 'BOS',
+ 'h0': 9,
+ 'h1': 17,
+ 'departureWeekday': 'Sunday',
+ 'arrivalDate': '2016-01-31',
+ 'carrier': 'AS',
+ 'm1': 40,
+ 'departureDate': '2016-01-31',
+ 'arrivalWeekday': 'Sunday',
+ 'home': 'SEA',
+ 'm0': 25},
+ {'dest': 'BOS',
+ 'h0': 21,
+ 'h1': 5,
+ 'departureWeekday': 'Monday',
+ 'arrivalDate': '2016-02-02',
+ 'carrier': 'AS',
+ 'm1': 40,
+ 'departureDate': '2016-02-01',
+ 'arrivalWeekday': 'Tuesday',
+ 'home': 'SEA',
+ 'm0': 25},
+ {'dest': 'BOS',
+ 'h0': 23,
+ 'h1': 7,
+ 'departureWeekday': 'Monday',
+ 'arrivalDate': '2016-02-02',
+ 'carrier': 'B6',
+ 'm1': 45,
+ 'departureDate': '2016-02-01',
+ 'arrivalWeekday': 'Tuesday',
+ 'home': 'SEA',
+ 'm0': 40},
+ {'dest': 'BOS',
+ 'h0': 13,
+ 'h1': 21,
+ 'departureWeekday': 'Monday',
+ 'arrivalDate': '2016-02-01',
+ 'carrier': 'B6',
+ 'm1': 10,
+ 'departureDate': '2016-02-01',
+ 'arrivalWeekday': 'Monday',
+ 'home': 'SEA',
+ 'm0': 10},
+ {'dest': 'BOS',
+ 'h0': 9,
+ 'h1': 17,
+ 'departureWeekday': 'Monday',
+ 'arrivalDate': '2016-02-01',
+ 'carrier': 'AS',
+ 'm1': 40,
+ 'departureDate': '2016-02-01',
+ 'arrivalWeekday': 'Monday',
+ 'home': 'SEA',
+ 'm0': 25},
+ {'dest': 'SEA',
+ 'h0': 19,
+ 'h1': 22,
+ 'departureWeekday': 'Friday',
+ 'arrivalDate': '2016-01-29',
+ 'carrier': 'B6',
+ 'm1': 50,
+ 'departureDate': '2016-01-29',
+ 'arrivalWeekday': 'Friday',
+ 'home': 'BOS',
+ 'm0': 30},
+ {'dest': 'SEA',
+ 'h0': 9,
+ 'h1': 12,
+ 'departureWeekday': 'Friday',
+ 'arrivalDate': '2016-01-29',
+ 'carrier': 'B6',
+ 'm1': 20,
+ 'departureDate': '2016-01-29',
+ 'arrivalWeekday': 'Friday',
+ 'home': 'BOS',
+ 'm0': 0},
+ {'dest': 'SEA',
+ 'h0': 7,
+ 'h1': 10,
+ 'departureWeekday': 'Friday',
+ 'arrivalDate': '2016-01-29',
+ 'carrier': 'AS',
+ 'm1': 40,
+ 'departureDate': '2016-01-29',
+ 'arrivalWeekday': 'Friday',
+ 'home': 'BOS',
+ 'm0': 0},
+ {'dest': 'SEA',
+ 'h0': 18,
+ 'h1': 22,
+ 'departureWeekday': 'Friday',
+ 'arrivalDate': '2016-01-29',
+ 'carrier': 'AS',
+ 'm1': 20,
+ 'departureDate': '2016-01-29',
+ 'arrivalWeekday': 'Friday',
+ 'home': 'BOS',
+ 'm0': 45},
+ {'dest': 'SEA',
+ 'h0': 18,
+ 'h1': 22,
+ 'departureWeekday': 'Saturday',
+ 'arrivalDate': '2016-01-30',
+ 'carrier': 'AS',
+ 'm1': 20,
+ 'departureDate': '2016-01-30',
+ 'arrivalWeekday': 'Saturday',
+ 'home': 'BOS',
+ 'm0': 45},
+ {'dest': 'SEA',
+ 'h0': 19,
+ 'h1': 22,
+ 'departureWeekday': 'Saturday',
+ 'arrivalDate': '2016-01-30',
+ 'carrier': 'B6',
+ 'm1': 50,
+ 'departureDate': '2016-01-30',
+ 'arrivalWeekday': 'Saturday',
+ 'home': 'BOS',
+ 'm0': 30},
+ {'dest': 'SEA',
+ 'h0': 7,
+ 'h1': 10,
+ 'departureWeekday': 'Saturday',
+ 'arrivalDate': '2016-01-30',
+ 'carrier': 'AS',
+ 'm1': 40,
+ 'departureDate': '2016-01-30',
+ 'arrivalWeekday': 'Saturday',
+ 'home': 'BOS',
+ 'm0': 0},
+ {'dest': 'SEA',
+ 'h0': 19,
+ 'h1': 22,
+ 'departureWeekday': 'Sunday',
+ 'arrivalDate': '2016-01-31',
+ 'carrier': 'B6',
+ 'm1': 50,
+ 'departureDate': '2016-01-31',
+ 'arrivalWeekday': 'Sunday',
+ 'home': 'BOS',
+ 'm0': 30},
+ {'dest': 'SEA',
+ 'h0': 9,
+ 'h1': 12,
+ 'departureWeekday': 'Sunday',
+ 'arrivalDate': '2016-01-31',
+ 'carrier': 'B6',
+ 'm1': 20,
+ 'departureDate': '2016-01-31',
+ 'arrivalWeekday': 'Sunday',
+ 'home': 'BOS',
+ 'm0': 0},
+ {'dest': 'SEA',
+ 'h0': 18,
+ 'h1': 22,
+ 'departureWeekday': 'Sunday',
+ 'arrivalDate': '2016-01-31',
+ 'carrier': 'AS',
+ 'm1': 20,
+ 'departureDate': '2016-01-31',
+ 'arrivalWeekday': 'Sunday',
+ 'home': 'BOS',
+ 'm0': 45},
+ {'dest': 'SEA',
+ 'h0': 9,
+ 'h1': 12,
+ 'departureWeekday': 'Monday',
+ 'arrivalDate': '2016-02-01',
+ 'carrier': 'B6',
+ 'm1': 20,
+ 'departureDate': '2016-02-01',
+ 'arrivalWeekday': 'Monday',
+ 'home': 'BOS',
+ 'm0': 0},
+ {'dest': 'SEA',
+ 'h0': 19,
+ 'h1': 22,
+ 'departureWeekday': 'Monday',
+ 'arrivalDate': '2016-02-01',
+ 'carrier': 'B6',
+ 'm1': 50,
+ 'departureDate': '2016-02-01',
+ 'arrivalWeekday': 'Monday',
+ 'home': 'BOS',
+ 'm0': 30},
+ {'dest': 'SEA',
+ 'h0': 18,
+ 'h1': 22,
+ 'departureWeekday': 'Monday',
+ 'arrivalDate': '2016-02-01',
+ 'carrier': 'AS',
+ 'm1': 20,
+ 'departureDate': '2016-02-01',
+ 'arrivalWeekday': 'Monday',
+ 'home': 'BOS',
+ 'm0': 45},
+ {'dest': 'SEA',
+ 'h0': 7,
+ 'h1': 10,
+ 'departureWeekday': 'Monday',
+ 'arrivalDate': '2016-02-01',
+ 'carrier': 'AS',
+ 'm1': 40,
+ 'departureDate': '2016-02-01',
+ 'arrivalWeekday': 'Monday',
+ 'home': 'BOS',
+ 'm0': 0},
+ {'dest': 'SEA',
+ 'h0': 18,
+ 'h1': 22,
+ 'departureWeekday': 'Tuesday',
+ 'arrivalDate': '2016-02-02',
+ 'carrier': 'AS',
+ 'm1': 20,
+ 'departureDate': '2016-02-02',
+ 'arrivalWeekday': 'Tuesday',
+ 'home': 'BOS',
+ 'm0': 45},
+ {'dest': 'SEA',
+ 'h0': 7,
+ 'h1': 10,
+ 'departureWeekday': 'Tuesday',
+ 'arrivalDate': '2016-02-02',
+ 'carrier': 'AS',
+ 'm1': 40,
+ 'departureDate': '2016-02-02',
+ 'arrivalWeekday': 'Tuesday',
+ 'home': 'BOS',
+ 'm0': 0},
+ {'dest': 'SEA',
+ 'h0': 9,
+ 'h1': 12,
+ 'departureWeekday': 'Tuesday',
+ 'arrivalDate': '2016-02-02',
+ 'carrier': 'B6',
+ 'm1': 20,
+ 'departureDate': '2016-02-02',
+ 'arrivalWeekday': 'Tuesday',
+ 'home': 'BOS',
+ 'm0': 0},
+ {'dest': 'BOS',
+ 'h0': 13,
+ 'h1': 21,
+ 'departureWeekday': 'Thursday',
+ 'arrivalDate': '2016-01-28',
+ 'carrier': 'B6',
+ 'm1': 10,
+ 'departureDate': '2016-01-28',
+ 'arrivalWeekday': 'Thursday',
+ 'home': 'SEA',
+ 'm0': 10},
+ {'dest': 'BOS',
+ 'h0': 23,
+ 'h1': 7,
+ 'departureWeekday': 'Thursday',
+ 'arrivalDate': '2016-01-29',
+ 'carrier': 'B6',
+ 'm1': 45,
+ 'departureDate': '2016-01-28',
+ 'arrivalWeekday': 'Friday',
+ 'home': 'SEA',
+ 'm0': 40},
+ {'dest': 'BOS',
+ 'h0': 9,
+ 'h1': 17,
+ 'departureWeekday': 'Thursday',
+ 'arrivalDate': '2016-01-28',
+ 'carrier': 'AS',
+ 'm1': 40,
+ 'departureDate': '2016-01-28',
+ 'arrivalWeekday': 'Thursday',
+ 'home': 'SEA',
+ 'm0': 25},
+ {'dest': 'BOS',
+ 'h0': 21,
+ 'h1': 5,
+ 'departureWeekday': 'Thursday',
+ 'arrivalDate': '2016-01-29',
+ 'carrier': 'AS',
+ 'm1': 40,
+ 'departureDate': '2016-01-28',
+ 'arrivalWeekday': 'Friday',
+ 'home': 'SEA',
+ 'm0': 25}]
