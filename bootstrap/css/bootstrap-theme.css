@@ -3,6 +3,15 @@
  * Copyright 2011-2015 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
+
+
+
+.btn-xl {
+    padding: 0px 0px;
+    font-size: 22px;
+    border-radius: 8px;
+}
+
 .btn-default,
 .btn-primary,
 .btn-success,
