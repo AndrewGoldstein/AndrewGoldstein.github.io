@@ -67,7 +67,7 @@
 
 
 <SCRIPT LANGUAGE="JavaScript">
-cookie_name = "dataCookie";
+cookie_name = "current_user";
 var User;
 function getName() {
 if(document.cookie)
@@ -84,8 +84,9 @@ return User;
 }
 }
 User=getName();
-if (User == "dataCookie")
-{window.location = "http://www.google.com"}
+console.log(User)
+if (User == "current_user")
+{window.location = "http://www.google.com";}
 
 </SCRIPT> 
 
