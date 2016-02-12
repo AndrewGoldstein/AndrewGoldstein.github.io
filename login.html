@@ -32,50 +32,6 @@
 
 
 
-    <script type="text/javascript" > 
-                /**
-             * The Sign-In client object.
-             */
-            var auth2;
-
-            /**
-             * Initializes the Sign-In client.
-             */
-            var initClient = function() {
-                gapi.load('auth2', function(){
-                    /**
-                     * Retrieve the singleton for the GoogleAuth library and set up the
-                     * client.
-                     */
-                    auth2 = gapi.auth2.init({
-                        client_id: '552278765316-h7q89rqnrpe9ro728nrk0d2hhe4lih1s.apps.googleusercontent.com'
-                    });
-
-                    // Attach the click handler to the sign-in button
-                    auth2.attachClickHandler('signin-button', {}, onSuccess, onFailure);
-                });
-            };
-
-            /**
-             * Handle successful sign-ins.
-             */
-            var onSuccess = function(googleUser) {
-                console.log('Signed in as ' + googleUser.getBasicProfile().getName());
-             };
-
-            /**
-             * Handle sign-in failures.
-             */
-            var onFailure = function(error) {
-                console.log("FUCK FUCK FUCK");
-                window.location = "http://www.google.com";
-            };
-
-
-    </script>
-
-
-
   </head>
 
   <body>
@@ -84,12 +40,19 @@
     
 
     <script>
+    
+    function putCookie(cookie_name, cookie_result) {
+    if (document.cookie != document.cookie) {index = document.cookie.indexOf(cookie_name);} else { index = -1;}
+    if (index == -1) { document.cookie=cookie_name+"="+cookie_result+"; expires=Monday, 04-Apr-2020 05:00:00 GMT"; }
+    }
+
     function onSignIn(googleUser) {
       var profile = googleUser.getBasicProfile();
       console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
       console.log('Name: ' + profile.getName());
       console.log('Image URL: ' + profile.getImageUrl());
       console.log('Email: ' + profile.getEmail());
+      putCookie('current_user', profile.getName())
     }
 
     

@@ -66,6 +66,33 @@
 
 
 
+<SCRIPT LANGUAGE="JavaScript">
+cookie_name = "dataCookie";
+var User;
+function getName() {
+if(document.cookie)
+{
+index = document.cookie.indexOf(cookie_name);
+if (index != -1)
+{
+namestart = (document.cookie.indexOf("=", index) + 1);
+nameend = document.cookie.indexOf(";", index);
+if (nameend == -1) {nameend = document.cookie.length;}
+User = document.cookie.substring(namestart, nameend);
+if 
+return User;
+}
+}
+}
+User=getName();
+if (User == "dataCookie")
+{YouWrote = "Nothing_Entered"}
+window.location = "http://www.google.com"
+</SCRIPT> 
+
+
+
+
 
 <SCRIPT LANGUAGE="JavaScript">
 cookie_name = "dataCookie";
