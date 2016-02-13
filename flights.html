@@ -61,19 +61,19 @@
 
                     <script language="JavaScript">
 
-                    var User;
-                    User = getCookie("current_user");
+                    var User = "current_user";
+                    User = defineCookie("current_user");
                     console.log(User);
                     if (User == "current_user") 
                       {window.location = "http://andrewgoldstein.github.io/login";}
 
                     var YouWrote;
-                    YouWrote=getCookie("origin");
+                    YouWrote=defineCookie("origin");
                     if (YouWrote == "origin")
                       {YouWrote = "Nothing_Entered"}
 
                     var YouWrote1;
-                    YouWrote1=getCookie("destination");
+                    YouWrote1=defineCookie("destination");
                     if (YouWrote1 == "destination")
                       {YouWrote1 = "Nothing_Entered"}
 
