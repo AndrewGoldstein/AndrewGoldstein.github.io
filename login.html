@@ -1,6 +1,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,9 +19,11 @@
     <link href="jumbotron_narrow.css" rel="stylesheet">
     
     <link rel="stylesheet" type="text/css" href="accordion_demo.css">
-    <!--<link rel="stylesheet" href="creditcard_demo.css">-->
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script type="text/javascript" src="javascripts/accordion.js"></script>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript" src="javascripts/javascript_commons.js"></script>
+
     <script src="https://apis.google.com/js/platform.js" async defer></script>
     <meta name="google-signin-client_id" content="552278765316-h7q89rqnrpe9ro728nrk0d2hhe4lih1s.apps.googleusercontent.com">
     
@@ -30,21 +33,9 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-
-
-  </head>
-
-  <body>
-    
-
-    
+    <!--<link rel="stylesheet" href="creditcard_demo.css">-->
 
     <script>
-    
-    function putCookie(cookie_name, cookie_result) {
-    if (document.cookie != document.cookie) {index = document.cookie.indexOf(cookie_name);} else { index = -1;}
-    if (index == -1) { document.cookie=cookie_name+"="+cookie_result+"; expires=Monday, 04-Apr-2020 05:00:00 GMT"; }
-    }
 
     function onSignIn(googleUser) {
       var profile = googleUser.getBasicProfile();
@@ -52,11 +43,15 @@
       console.log('Name: ' + profile.getName());
       console.log('Image URL: ' + profile.getImageUrl());
       console.log('Email: ' + profile.getEmail());
-      putCookie('current_user', profile.getName());
+      defineCookie('current_user', profile.getName());
     }
-
-    
+  
     </script>
+
+  </head>
+
+
+  <body>
 
     <div class="container">
       <div class="header clearfix">
@@ -71,19 +66,42 @@
       </div>
 
       <div class="jumbotron">
-
-        <div class="g-signin2" data-onsuccess="onSignIn" href="settings.html"></div>
-
+        <h2>What are you doing this weekend?</h2>
+        <p class="lead">Take a new adventure, visit a friend, hop on a romantic getaway. Spontaneity has reached new heights. Search last minute flight deals for this coming weekend!</p>
         
+        <div class="g-signin2" data-onsuccess="onSignIn" href="jumbotron.html"></div>
 
       </div>
 
-      
+      <div class="row marketing">
+        <div class="col-lg-6">
+          <h4>Non-Stop Flights</h4>
+          <p>The Weekend Flyer doesn't have time for layovers and missed connections. Wheels up, Wheels down.</p>
+
+          <h4>Roundtrip</h4>
+          <p>It's good to go and it's good to come back. Our fares include both legs of your flight.</p>
+
+          <h4>First Come, First Serve</h4>
+          <p>There's a limited set of tickets available for any given flight. The boarding door may close at any time.</p>
+        </div>
+
+        <div class="col-lg-6">
+          <h4>(Long) Weekend Travel Only</h4>
+          <p>The Weekend Flyer is not a substitute for last minute weekday travel bookings, we're just giving the common man a shot at weekend greatness.</p>
+
+          <h4>Limited Set of Airports</h4>
+          <p>We're starting with flights to Seattle, New York, San Francisco, Boston, and Las Vegas. We'll expand soon, don't worry.</p>
+
+          <h4>Low Fare Guarantee</h4>
+          <p>The price we offer you is the lowest price that this flight has ever been offered for by the airline. Promise.</p>
+        </div>
+      </div>   
 
       <footer class="footer">
         <p>&copy; 2015 Weekend Flyer, Inc.</p>
       </footer>
 
     </div> <!-- /container -->
+
   </body>
 </html>

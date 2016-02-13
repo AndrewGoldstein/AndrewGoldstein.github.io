@@ -19,9 +19,11 @@
     <link href="jumbotron_narrow.css" rel="stylesheet">
     
     <link rel="stylesheet" type="text/css" href="accordion_demo.css">
+    <script type="text/javascript" src="javascripts/accordion.js"></script>
 
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script type="text/javascript" src="javascripts/accordion.js"></script>
+    <script type="text/javascript" src="javascripts/javascript_commons.js"></script>
+
     <script src="https://apis.google.com/js/platform.js" async defer></script>
     <meta name="google-signin-client_id" content="552278765316-h7q89rqnrpe9ro728nrk0d2hhe4lih1s.apps.googleusercontent.com">
     
@@ -58,108 +60,58 @@
       <div class="jumbotron">
 
 
-<SCRIPT LANGUAGE="JavaScript">
-
-cookie_name = "dataCookie";
-
-function putCookie(origin) {
-
-if(document.cookie != document.cookie) 
-{index = document.cookie.indexOf(cookie_name);}
-else 
-{ index = -1;}
-
-if (index == -1)
-{
-document.cookie=cookie_name+"="+origin+"; expires=Monday, 04-Apr-2020 05:00:00 GMT";
-}
-
-}
-
-</SCRIPT>
 
 
 
+        <!--<script language="JavaScript">
 
+            function defineCookie(cookie_name, cookie_result) {
+                if (document.cookie != document.cookie) {index = document.cookie.indexOf(cookie_name);} else { index = -1;}
+                if (index == -1) { document.cookie=cookie_name+"="+cookie_result+"; expires=Monday, 04-Apr-2020 05:00:00 GMT"; }
+            }
 
+            function close_accordion_section() {
+                jQuery('.accordion .accordion-section-title').removeClass('active');
+                jQuery('.accordion .accordion-section-content').slideUp(300).removeClass('open');
+            }
 
-<SCRIPT LANGUAGE="JavaScript">
-
-cookie_name1 = "dataCookie1";
-
-function putCookie1(de) {
-
-if(document.cookie != document.cookie) 
-{index = document.cookie.indexOf(cookie_name1);}
-else 
-{ index = -1;}
-
-if (index == -1)
-{
-document.cookie=cookie_name1+"="+de+"; expires=Monday, 04-Apr-2020 05:00:00 GMT";
-}
-
-}
-
-</SCRIPT>
-
-<script>
-  function close_accordion_section() {
-    jQuery('.accordion .accordion-section-title').removeClass('active');
-    jQuery('.accordion .accordion-section-content').slideUp(300).removeClass('open');
-  }
-</script>
+            function passCookie(id,value){
+                if (value != ''){
+                    document.getElementById(id).innerHTML = value;
+                    defineCookie(id, value);
+                    close_accordion_section();
+                }
+            }
+                                       
+        </script>-->
 
 
         <h2>What are you doing this weekend?</h2>
         <p class="lead">Take a new adventure, visit a friend, hop on a romantic getaway. Spontaneity has reached new heights. Search last minute flight deals for this coming weekend!</p>
         <p>
 
-            
                           <div class="main">
                             <div class="accordion">
 
-
-
-
                               <div class="accordion-section">
-                                <a id="fill-me" class="accordion-section-title" href="#accordion-4">Select your Home City</a>
+                                <a id="origin" class="accordion-section-title" href="#accordion-4">Select your Home City</a>
                                 <div id="accordion-4" class="accordion-section-content">
-                                    <select id="item1" onChange="go(this.value)">
+                                    <select id="item1" onChange="passCookie('origin', this.value)">
                                       <option value="select">Timbuktu</option>
                                       <option value="San Francisco">San Francisco</option>
                                       <option value="Seattle">Seattle</option>
                                       <option value="New York City">New York City</option>
                                       <option value="Boston">Boston</option>
                                     </select>
-
-                                  <script>
-                                  function go(origin){
-                                      if (origin != ''){
-                                           console.log(origin);
-                                           document.getElementById("fill-me").innerHTML = origin;
-                                           putCookie(origin);
-                                           close_accordion_section();
-                                           console.log(origin);
-                                      }
-                                  }
-                                   </script>
-
-
-
-
-
                                 </div><!--end .accordion-section-content-->
                               </div><!--end .accordion-section-->
 
                               <p line-height= ".3em"> </p>
 
-
-
                               <div class="accordion-section">
-                                <a id="fill-me-in" class="accordion-section-title" href="#accordion-5">Select your Destination</a>
+                                <a id="destination" class="accordion-section-title" href="#accordion-5">Select your Destination</a>
                                 <div id="accordion-5" class="accordion-section-content">
-                                  <select id="item2" onChange="go1(this.value)">
+                                  <select id="item2" onChange="passCookie('destination', this.value)">
                                     <option value="select">Select Destination</option>
                                     <option value="San Francisco">San Francisco</option>
                                     <option value="Seattle">Seattle</option>
@@ -167,27 +119,11 @@ document.cookie=cookie_name1+"="+de+"; expires=Monday, 04-Apr-2020 05:00:00 GMT"
                                     <option value="Boston">Boston</option>
                                     <option value="Adventure">Surprise Me!</option>
                                   </select>
-
-                                              <script>
-                                              function go1(destination){
-                                                  if (destination != ''){
-                                                       console.log(destination);
-                                                       document.getElementById("fill-me-in").innerHTML = destination;
-                                                       putCookie1(destination);
-                                                       close_accordion_section();
-                                                       console.log(destination);
-                                                  }
-                                              } 
-                                               </script>
-
-                              
-
-
                                 </div><!--end .accordion-section-content-->
                               </div><!--end .accordion-section-->
+                            
                             </div><!--end .accordion-->
                           </div>
-
 
             <br>
             <a class="btn btn-lg btn-success" href="flights.html" role="button">Let's Jet!</a>
