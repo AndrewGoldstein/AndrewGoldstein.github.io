@@ -4,6 +4,10 @@
 			function defineCookie(cookie_name, cookie_result) {
                 if (document.cookie != document.cookie) {index = document.cookie.indexOf(cookie_name);} else { index = -1;}
                 if (index == -1) { document.cookie=cookie_name+"="+cookie_result+"; expires=Monday, 04-Apr-2020 05:00:00 GMT"; }
+                console.log("hello")
+                console.log(cookie_name);
+                console.log(cookie.result);
+                console.log("hello")
             }
 
             function close_accordion_section() {
@@ -15,10 +19,12 @@
                 if (value != ''){
                     document.getElementById(id).innerHTML = value;
                     defineCookie(id, value);
+                    console.log(id);
+                    console.log(value);
                     close_accordion_section();
                 }
             }
-            
+
 		  function getCookie(cookie_name) {
 		    if(document.cookie) {
 		      index = document.cookie.indexOf(cookie_name);
