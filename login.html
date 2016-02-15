@@ -116,7 +116,16 @@
         
         <div class="g-signin2" data-onsuccess="onSignIn" href="jumbotron.html"></div>
         <!--<a href="#" onclick="signOut();">Sign out</a>-->
+        <p id="demo"></p>
 
+        <script>
+        try {
+            console.log(googleUser);
+        }
+        catch(err) {
+            document.getElementById("demo").innerHTML = "NO NO NO NO";
+        }
+        </script>
       </div>
 
       <div class="row marketing">
