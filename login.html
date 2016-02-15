@@ -36,42 +36,12 @@
     <!--<link rel="stylesheet" href="creditcard_demo.css">-->
 
     <script>
-    /**
-     * The Sign-In client object.
-     */
-    var auth2;
-
-    /**
-     * Initializes the Sign-In client.
-     */
-    var initClient = function() {
-        gapi.load('auth2', function(){
-            /**
-             * Retrieve the singleton for the GoogleAuth library and set up the
-             * client.
-             */
-            auth2 = gapi.auth2.init({
-                client_id: '552278765316-h7q89rqnrpe9ro728nrk0d2hhe4lih1s.apps.googleusercontent.com'
-            });
-
-            // Attach the click handler to the sign-in button
-            auth2.attachClickHandler('signin-button', {}, onSuccess, onFailure);
-        });
-    };
-
-    /**
-     * Handle successful sign-ins.
-     */
-    var onSuccess = function(user) {
-        console.log('Signed in as ' + user.getBasicProfile().getName());
-     };
-
-    /**
-     * Handle sign-in failures.
-     */
-    var onFailure = function(error) {
-        console.log(error);
-    };
+      try {
+            console.log(googleUser);
+      }
+      catch(err) {
+            console.log( "NO NO NO NO"  );
+      }
 
     function onSignIn(googleUser) {
       var profile = googleUser.getBasicProfile();
@@ -80,7 +50,6 @@
       console.log('Image URL: ' + profile.getImageUrl());
       console.log('Email: ' + profile.getEmail());
       defineCookie('current_user', profile.getName());  
-      console.log(googleUser);
     }
 
     function signOut() {
@@ -116,16 +85,9 @@
         
         <div class="g-signin2" data-onsuccess="onSignIn" href="jumbotron.html"></div>
         <!--<a href="#" onclick="signOut();">Sign out</a>-->
-        <p id="demo"></p>
 
-        <script>
-        try {
-            console.log(googleUser);
-        }
-        catch(err) {
-            document.getElementById("demo").innerHTML = "NO NO NO NO";
-        }
-        </script>
+
+   
       </div>
 
       <div class="row marketing">
