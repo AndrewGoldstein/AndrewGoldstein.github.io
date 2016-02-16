@@ -48,7 +48,7 @@
                     window.location = "http://andrewgoldstein.github.io/login.html" ;
               }
           }
-
+                    onSignIn
                     var User = "current_user";
                     User = getCookie("current_user");
                     console.log(User);
@@ -78,6 +78,9 @@
 
         <h2>What are you doing this weekend?</h2>
         <p class="lead">Take a new adventure, visit a friend, hop on a romantic getaway. Spontaneity has reached new heights. Search last minute flight deals for this coming weekend!</p>
+        <p><a href="#" data-onsuccess="onSignIn" onclick="signOut();">Sign out</a></p>
+
+
         <p>
 
                           <div class="main">
