@@ -15,10 +15,10 @@ function geoFindMe() {
 
     output.innerHTML = '<p>Latitude is ' + latitude + '° <br>Longitude is ' + longitude + '°</p>';
 
-    var img = new Image();
-    img.src = "https://maps.googleapis.com/maps/api/staticmap?center=" + latitude + "," + longitude + "&zoom=13&size=300x300&sensor=false";
+    //var img = new Image();
+    //img.src = "https://maps.googleapis.com/maps/api/staticmap?center=" + latitude + "," + longitude + "&zoom=13&size=300x300&sensor=false";
 
-    output.appendChild(img);
+    //output.appendChild(img);
   };
 
   function error() {
@@ -33,3 +33,51 @@ function geoFindMe() {
 
 <p><button onclick="geoFindMe()">Show my location</button></p>
 <div id="out"></div>
+<script type="text/javascript">
+
+var airports = 
+[
+{ 
+'name': 'San Francisco Intl',
+'city': "San Francisco",
+'code': "SFO",
+'lat': 37.618972,
+'lon': -122.374889,
+'tz' : "America/Los_Angeles"
+},
+{
+'name': "Seattle Tacoma Intl",
+'city': "Seattle",
+'code': "SEA",
+'lat': 47.449,
+'lon': -122.309306,
+'tz': "America/Los_Angeles"
+},
+{
+'name': "John F Kennedy Intl",
+'city': "New York",
+'code': "JFK",
+'lat': 40.639751,
+'lon': -73.778925,
+'tz': "America/New_York"
+},
+{
+'name':"General Edward Lawrence Logan Intl",
+'city': "Boston",
+'code': "BOS",
+'lat':42.364347,
+'lon': -71.005181,
+'tz':"America/New_York"
+},
+{
+'name':"Mc Carran Intl",
+'city': "Las Vegas",
+'code': "LAS",
+'lat':36.080056,
+'lon': -115.15225,
+'tz':"America/Los_Angeles"
+}]
+
+
+
+</script>
