@@ -37,7 +37,22 @@
           emailjs.init("user_P9ZRzstNVrsKAxg5cttib");
        })();
     </script>
+    <script>
+          function onSignIn(googleUser) {
+              try {
+                    console.log(googleUser);
+              }
+              catch(err) {
+                    window.location = "http://andrewgoldstein.github.io/login.html" ;
+              }
+          }
 
+                    var User = "current_user";
+                    User = getCookie("current_user");
+                    console.log(User);
+                    if (User == "current_user") 
+                      {window.location = "http://andrewgoldstein.github.io/login.html"}
+    </script>
   </head>
 
 
@@ -67,7 +82,7 @@
                     User = getCookie("current_user");
                     console.log(User);
                     if (User == "current_user") 
-                      {window.location = "http://andrewgoldstein.github.io/login"}
+                      {window.location = "http://andrewgoldstein.github.io/login.html"}
 
                     var YouWrote;
                     YouWrote=getCookie("origin");

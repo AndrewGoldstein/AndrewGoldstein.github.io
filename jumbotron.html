@@ -40,6 +40,14 @@
        })();
     </script>-->
     <script language="JavaScript">
+          function onSignIn(googleUser) {
+              try {
+                    console.log(googleUser);
+              }
+              catch(err) {
+                    window.location = "http://andrewgoldstein.github.io/login.html" ;
+              }
+          }
 
                     var User = "current_user";
                     User = getCookie("current_user");
@@ -66,32 +74,6 @@
       </div>
 
       <div class="jumbotron">
-
-
-
-
-
-        <!--<script language="JavaScript">
-
-            function defineCookie(cookie_name, cookie_result) {
-                if (document.cookie != document.cookie) {index = document.cookie.indexOf(cookie_name);} else { index = -1;}
-                if (index == -1) { document.cookie=cookie_name+"="+cookie_result+"; expires=Monday, 04-Apr-2020 05:00:00 GMT"; }
-            }
-
-            function close_accordion_section() {
-                jQuery('.accordion .accordion-section-title').removeClass('active');
-                jQuery('.accordion .accordion-section-content').slideUp(300).removeClass('open');
-            }
-
-            function passCookie(id,value){
-                if (value != ''){
-                    document.getElementById(id).innerHTML = value;
-                    defineCookie(id, value);
-                    close_accordion_section();
-                }
-            }
-                                       
-        </script>-->
 
 
         <h2>What are you doing this weekend?</h2>
