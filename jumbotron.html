@@ -40,21 +40,40 @@
        })();
     </script>-->
     <script language="JavaScript">
-              function signOut() {
+
+            var updateSignIn = function() {
+              console.log('update sign in state');
+              if (auth2.isSignedIn.get()) {
+                console.log('signed in');
+                helper.onSignInCallback(gapi.auth2.getAuthInstance());
+              }else{
+                console.log('signed out');
+                helper.onSignInCallback(gapi.auth2.getAuthInstance());
+              }
+            }
+      
+            function loadPage() {
+              console.log("Hello")
+              auth2 = gapi.auth2.getAuthInstance();
+              auth2.isSignedIn.listen(updateSignIn);
+              auth2.then(updateSignIn);
+            }  
+
+            function signOut() {
                 var auth2 = gapi.auth2.getAuthInstance();
                 auth2.signOut().then(function () {
                   console.log('User signed out.');
                 });
-              }
+            }
               
-          function onSignIn(googleUser) {
+            function onSignIn(googleUser) {
               try {
                     console.log(googleUser);
               }
               catch(err) {
                     window.location = "http://andrewgoldstein.github.io/login.html" ;
               }
-          }
+            }
                     var User = "current_user";
                     User = getCookie("current_user");
                     console.log(User);
@@ -84,7 +103,7 @@
 
         <h2>What are you doing this weekend?</h2>
         <p class="lead">Take a new adventure, visit a friend, hop on a romantic getaway. Spontaneity has reached new heights. Search last minute flight deals for this coming weekend!</p>
-        <div><a class="g-signin2" href="#" data-onsuccess="onSignIn" onclick="signOut();">Sign out</a></div>
+        <div><a href="#" onclick="signOut();">Sign out</a></div>
 
 
         <p>
@@ -158,6 +177,8 @@
       </footer>
 
     </div> <!-- /container -->
+  
+  <script src="https://apis.google.com/js/client:platform.js?onload=loadPage"></script>
 
   </body>
 </html>
