@@ -44,6 +44,14 @@
 			function reloaddiv() {
 			    jQuery('#item2').load('testingpage.html #item2');
 			    console.log('heyheyhey');
+			    var origin = getCookie("origin");
+                                    var valid_airports = [];
+                                    for (var i = 0, l = airports.length; i < l; ++i) {
+                                    	if (origin != airports[i].city) {valid_airports.push(airports[i])}
+                                    };
+                                    for (var i = 0, l = valid_airports.length; i < l; ++i) {
+                                      document.getElementById('item2').innerHTML += '<option value="'+ valid_airports[i].city.toString() + '">' + valid_airports[i].city.toString() +'</option>';
+                                  	};
 			}
 			
     </script>
