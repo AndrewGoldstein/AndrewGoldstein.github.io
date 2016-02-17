@@ -81,7 +81,8 @@ function geoFindMe() {
     //console.log(closest_airport(latitude,longitude))
     console.log([latitude,longitude])
     console.log( [{ 'lat':latitude, 'lon': longitude }])
-    return [{ 'lat':latitude, 'lon': longitude }]
+    var coords = [{ 'lat':latitude, 'lon': longitude },{ 'lat':latitude, 'lon': longitude }];
+    return coords
     //var img = new Image();
     //img.src = "https://maps.googleapis.com/maps/api/staticmap?center=" + latitude + "," + longitude + "&zoom=13&size=300x300&sensor=false";
 
