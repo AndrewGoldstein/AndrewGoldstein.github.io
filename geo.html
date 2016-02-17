@@ -6,7 +6,7 @@ var airports =
 { 
 'name': 'San Francisco Intl',
 'city': "San Francisco",
-'code': "SFO",
+'abbv': "SFO",
 'lat': 37.618972,
 'lon': -122.374889,
 'tz' : "America/Los_Angeles"
@@ -14,7 +14,7 @@ var airports =
 {
 'name': "Seattle Tacoma Intl",
 'city': "Seattle",
-'code': "SEA",
+'abbv': "SEA",
 'lat': 47.449,
 'lon': -122.309306,
 'tz': "America/Los_Angeles"
@@ -22,7 +22,7 @@ var airports =
 {
 'name': "John F Kennedy Intl",
 'city': "New York",
-'code': "JFK",
+'abbv': "JFK",
 'lat': 40.639751,
 'lon': -73.778925,
 'tz': "America/New_York"
@@ -30,7 +30,7 @@ var airports =
 {
 'name':"General Edward Lawrence Logan Intl",
 'city': "Boston",
-'code': "BOS",
+'abbv': "BOS",
 'lat':42.364347,
 'lon': -71.005181,
 'tz':"America/New_York"
@@ -38,7 +38,7 @@ var airports =
 {
 'name':"Mc Carran Intl",
 'city': "Las Vegas",
-'code': "LAS",
+'abbv': "LAS",
 'lat':36.080056,
 'lon': -115.15225,
 'tz':"America/Los_Angeles"
@@ -72,14 +72,21 @@ function geoFindMe() {
   }
 
   function closest_airport(lat,lon)  {
+    var home_airport = ''
     var dist = 1000000
     for (i = 0; i < airports.length; i++) {
       distance_from_airport = haversineDistance(airports[i].lat, airports[i].lon, lat, lon);
       if (distance_from_airport < dist) {
         dist = distance_from_airport;
+        home_airport = airports[i].abbv
       }
     }
-    return dist
+    if (home_airport != ''){
+      return home_airport
+    }
+    else {
+      return false
+    }
   }
 
   function success(position) {
