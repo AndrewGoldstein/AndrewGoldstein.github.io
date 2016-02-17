@@ -63,15 +63,45 @@ function haversineDistance(lat1,lon1, lat2,lon2) {
   return d;
 }
 
+
+
+
 function geoFindMe() {
-  var output = document.getElementById("out");
 
   if (!navigator.geolocation){
-    output.innerHTML = "<p>Geolocation is not supported by your browser</p>";
-    return;
+    console.log("geolocation is not supported by your browser")
+    return false
   }
 
-  function closest_airport(lat,lon)  {
+  function success(position) {
+    var latitude  = position.coords.latitude;
+    var longitude = position.coords.longitude;
+
+    //output.innerHTML = '<p>Latitude is ' + latitude + '° <br>Longitude is ' + longitude + '°</p>';
+    //console.log(closest_airport(latitude,longitude))
+    console.log([latitude,longitude])
+    return [latitude, longitude]
+    //var img = new Image();
+    //img.src = "https://maps.googleapis.com/maps/api/staticmap?center=" + latitude + "," + longitude + "&zoom=13&size=300x300&sensor=false";
+
+    //output.appendChild(img);
+  };
+
+  function error() {
+    console.log("Unable to retrieve your location")
+    return false
+  };
+
+  navigator.geolocation.getCurrentPosition(success, error);
+}
+
+
+
+
+  function closest_airport()  {
+    h = geoFindMe() 
+    var lat = h[0]
+    var lon = h[1]
     var home_airport = ''
     var dist = 1000000
     for (i = 0; i < airports.length; i++) {
@@ -82,6 +112,7 @@ function geoFindMe() {
       }
     }
     if (home_airport != ''){
+      console.log(home_airport)
       return home_airport
     }
     else {
@@ -89,35 +120,9 @@ function geoFindMe() {
     }
   }
 
-  function success(position) {
-    var latitude  = position.coords.latitude;
-    var longitude = position.coords.longitude;
-
-    output.innerHTML = '<p>Latitude is ' + latitude + '° <br>Longitude is ' + longitude + '°</p>';
-    console.log(closest_airport(latitude,longitude))
-    //var img = new Image();
-    //img.src = "https://maps.googleapis.com/maps/api/staticmap?center=" + latitude + "," + longitude + "&zoom=13&size=300x300&sensor=false";
-
-    //output.appendChild(img);
-  };
-
-  
-
-  function error() {
-    output.innerHTML = "Unable to retrieve your location";
-  };
-
-  output.innerHTML = "<p>Locating…</p>";
-
-  navigator.geolocation.getCurrentPosition(success, error);
-}
-</script>
-
-<p><button onclick="geoFindMe()">Show my location</button></p>
-<div data-onsuccess="geoFindMe" id="out"></div>
-<script type="text/javascript">
-
-
-
 
 </script>
+
+
+
+document.write(closest_airport())
