@@ -99,11 +99,11 @@ function geoFindMe() {
 
 
   function closest_airport()  {
-    h = geoFindMe() 
-    var lat = h[0]
-    var lon = h[1]
-    var home_airport = ''
-    var dist = 1000000
+    h = geoFindMe();
+    var lat = h[0];
+    var lon = h[1];
+    var home_airport = '';
+    var dist = 1000000;
     for (i = 0; i < airports.length; i++) {
       distance_from_airport = haversineDistance(airports[i].lat, airports[i].lon, lat, lon);
       if (distance_from_airport < dist) {
