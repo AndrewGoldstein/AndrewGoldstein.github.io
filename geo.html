@@ -80,7 +80,8 @@ function geoFindMe() {
     //output.innerHTML = '<p>Latitude is ' + latitude + '° <br>Longitude is ' + longitude + '°</p>';
     //console.log(closest_airport(latitude,longitude))
     console.log([latitude,longitude])
-    return { 'lat':latitude, 'lon': longitude }
+    console.log( [{ 'lat':latitude, 'lon': longitude }])
+    return [{ 'lat':latitude, 'lon': longitude }]
     //var img = new Image();
     //img.src = "https://maps.googleapis.com/maps/api/staticmap?center=" + latitude + "," + longitude + "&zoom=13&size=300x300&sensor=false";
 
