@@ -41,17 +41,22 @@
        })();
     </script>-->
     <script language="JavaScript">
-			function reloaddiv() {
-			    //jQuery('#item2').load('testingpage.html #item2');
-			    var origin = getCookie("origin");
-			                        document.getElementById('item2').innerHTML = '<option value="select">Select Destination</option>' ;
-                                    var valid_airports = [];
-                                    for (var i = 0, l = airports.length; i < l; ++i) {
-                                    	if (origin != airports[i].city) {valid_airports.push(airports[i])}
-                                    };
-                                    for (var i = 0, l = valid_airports.length; i < l; ++i) {
-                                      document.getElementById('item2').innerHTML += '<option value="'+ valid_airports[i].city.toString() + '">' + valid_airports[i].city.toString() +'</option>';
+			
+    		function populate_dropdown(ports, div){
+    			for (var i = 0, l = ports.length; i < l; ++i) {
+                                      document.getElementById(div).innerHTML += '<option value="'+ ports[i].city.toString() + '">' + ports[i].city.toString() +'</option>';
                                   	};
+    		}
+
+			function reloaddiv(div) {
+			    var origin = getCookie("origin");
+			    document.getElementById(div).innerHTML = '<option value="select">Select Destination</option>' ;
+                var valid_airports = [];
+                for (var i = 0, l = airports.length; i < l; ++i) {
+                    if (origin != airports[i].city) {valid_airports.push(airports[i])}
+                };
+                populate_dropdown(valid_airports);
+                                    
 			}
 			
     </script>
@@ -89,16 +94,14 @@
                               <div class="accordion-section">
                                 <a id="origin" class="accordion-section-title" href="#accordion-4">Select your Home City</a>
                                 <div id="accordion-4" class="accordion-section-content">
-                                    <select id="item1" onChange='passCookie("origin", this.value); reloaddiv(); '>
+                                    <select id="item1" onChange='passCookie("origin", this.value); reloaddiv("item2"); '>
                                       <option value="select">Timbuktu</option>
                                     </select>
 
 
                                     <script>
-                                    for (var i = 0, l = airports.length; i < l; ++i) {
-
-                                      document.getElementById('item1').innerHTML += '<option value="'+ airports[i].city.toString() + '">' + airports[i].city.toString() +'</option>';
-                                  	};
+                                    populate_dropdown(airports, 'item1');
+                                
                                     </script>
 
 
@@ -112,9 +115,6 @@
                                 <div id="accordion-5" class="accordion-section-content">
                                   <select id="item2" onChange='passCookie("destination", this.value)'>
                                     <option value="select">Select Destination</option>
-                                  
-
-                                    
 								  </select>
                                 </div><!--end .accordion-section-content-->
                               </div><!--end .accordion-section-->
