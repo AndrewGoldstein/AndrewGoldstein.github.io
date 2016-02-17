@@ -102,6 +102,7 @@ function geoFindMe() {
 
   function closest_airport()  {
     var h = geoFindMe();
+    console.log(h);
     var lat = h[0].lat;
     var lon = h[0].lon;
     var home_airport = '';
