@@ -112,17 +112,7 @@
                                     <option value="select">Select Destination</option>
                                   
 
-                                    <script>
-
-                                    var origin = getCookie("origin");
-                                    var valid_airports = [];
-                                    for (var i = 0, l = airports.length; i < l; ++i) {
-                                    	if (origin != airports[i].city) {valid_airports.push(airports[i])}
-                                    };
-                                    for (var i = 0, l = valid_airports.length; i < l; ++i) {
-                                      document.getElementById('item2').innerHTML += '<option value="'+ valid_airports[i].city.toString() + '">' + valid_airports[i].city.toString() +'</option>';
-                                  	};
-                                    </script>
+                                    
 								  </select>
                                 </div><!--end .accordion-section-content-->
                               </div><!--end .accordion-section-->
