@@ -79,10 +79,13 @@ function geoFindMe() {
 
     //output.innerHTML = '<p>Latitude is ' + latitude + '° <br>Longitude is ' + longitude + '°</p>';
     //console.log(closest_airport(latitude,longitude))
-    console.log([latitude,longitude])
-    console.log( [{ 'lat':latitude, 'lon': longitude }])
-    var coords = [{ 'lat':latitude, 'lon': longitude },{ 'lat':latitude, 'lon': longitude }];
-    return "hello"
+    console.log([latitude,longitude]);
+    var coords = [];
+    coords[0] = latitude;
+    coords[1] = longitude;
+    console.log( [{ 'lat':latitude, 'lon': longitude }]);
+    //var coords = [{ 'lat':latitude, 'lon': longitude },{ 'lat':latitude, 'lon': longitude }];
+    return coords
     //var img = new Image();
     //img.src = "https://maps.googleapis.com/maps/api/staticmap?center=" + latitude + "," + longitude + "&zoom=13&size=300x300&sensor=false";
 
