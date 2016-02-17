@@ -80,7 +80,7 @@ function geoFindMe() {
     //output.innerHTML = '<p>Latitude is ' + latitude + '° <br>Longitude is ' + longitude + '°</p>';
     //console.log(closest_airport(latitude,longitude))
     console.log([latitude,longitude])
-    return [latitude, longitude]
+    return { 'lat':latitude, 'lon': longitude }
     //var img = new Image();
     //img.src = "https://maps.googleapis.com/maps/api/staticmap?center=" + latitude + "," + longitude + "&zoom=13&size=300x300&sensor=false";
 
@@ -100,8 +100,8 @@ function geoFindMe() {
 
   function closest_airport()  {
     h = geoFindMe();
-    var lat = h[0];
-    var lon = h[1];
+    var lat = h.lat;
+    var lon = h.lon;
     var home_airport = '';
     var dist = 1000000;
     for (i = 0; i < airports.length; i++) {
