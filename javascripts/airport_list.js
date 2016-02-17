@@ -18,7 +18,7 @@ var airports =
 },
 {
 'name': "John F Kennedy Intl",
-'city': "New York",
+'city': "New York City",
 'abbv': "JFK",
 'lat': 40.639751,
 'lon': -73.778925,
