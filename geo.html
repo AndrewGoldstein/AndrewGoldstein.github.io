@@ -97,7 +97,7 @@ function geoFindMe() {
     return false
   };
 
-  return navigator.geolocation.getCurrentPosition(success, error);
+  console.log(navigator.geolocation.getCurrentPosition(success, error));
 }
 
 
