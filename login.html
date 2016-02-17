@@ -41,6 +41,7 @@
       var profile = googleUser.getBasicProfile();
             try {
                   console.log(googleUser);
+                  defineCookie('current_user', profile.getName());  
                   window.location = "http://andrewgoldstein.github.io/jumbotron.html" ;
             }
             catch(err) {
@@ -50,7 +51,6 @@
       //console.log('Name: ' + profile.getName());
       //console.log('Image URL: ' + profile.getImageUrl());
       //console.log('Email: ' + profile.getEmail());
-      defineCookie('current_user', profile.getName());  
     }
 
     function signOut() {

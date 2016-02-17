@@ -41,37 +41,7 @@
        })();
     </script>-->
     <script language="JavaScript">
-            function onLoad() {
-              gapi.load('auth2', function() {
-                gapi.auth2.init();
-              });
-            }
-            function signOut() {
-                var auth2 = gapi.auth2.getAuthInstance();
-                auth2.signOut().then(function () {
-                  console.log('User signed out.');
-                });
-                window.location = "http://andrewgoldstein.github.io/login.html" ;
-            }
-              
-            function onSignIn(googleUser) {
-              try {
-                    console.log(googleUser);
-              }
-              catch(err) {
-                    window.location = "http://andrewgoldstein.github.io/login.html" ;
-              }
-            }
-                    var User = "current_user";
-                    User = getCookie("current_user");
-                    console.log(User);
-                    if (User == "current_user") 
-                      {window.location = "http://andrewgoldstein.github.io/login.html"}
-
-
-
-
-  											
+							
 
     </script>
 
@@ -110,16 +80,12 @@
                                 <div id="accordion-4" class="accordion-section-content">
                                     <select id="item1" onChange='passCookie("origin", this.value)'>
                                       <option value="select">Timbuktu</option>
-                                      <option value="San Francisco">San Francisco</option>
-                                      <option value="Seattle">Seattle</option>
-                                      <option value="New York City">New York City</option>
-                                      <option value="Boston">Boston</option>
                                     </select>
 
 
                                     <script>
                                     for (var i = 0, l = airports.length; i < l; ++i) {
-                                      document.getElementById('item1').innerHTML += '<option value="'+ airports[i].city.toString() + '">' + airports[i].city.toString() +' </option> ';
+                                      document.getElementById('item1').innerHTML += '<option value="'+ airports[i].city.toString() + '">' + airports[i].city.toString() +'</option> ';
                                   	};
                                     </script>
 

@@ -37,6 +37,27 @@
 		    }
 		  }
 
+            function onLoad() {
+              gapi.load('auth2', function() {
+                gapi.auth2.init();
+              });
+            }
+            function signOut() {
+                var auth2 = gapi.auth2.getAuthInstance();
+                auth2.signOut().then(function () {
+                  console.log('User signed out.');
+                });
+                window.location = "http://andrewgoldstein.github.io/login.html" ;
+            }
+              
+            function onSignIn(googleUser) {
+              try {
+                    console.log(googleUser);
+              }
+              catch(err) {
+                    window.location = "http://andrewgoldstein.github.io/login.html" ;
+              }
+            }   
 
                                             function haversineDistance(lat1,lon1, lat2,lon2) {
                                               function toRad(x) {
