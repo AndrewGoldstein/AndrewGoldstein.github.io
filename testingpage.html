@@ -41,8 +41,10 @@
        })();
     </script>-->
     <script language="JavaScript">
-							
-
+			function reloaddiv() {
+			    jQuery('#item2').load('testingpage.html #item2');
+			}
+			
     </script>
 
   </head>
@@ -78,7 +80,7 @@
                               <div class="accordion-section">
                                 <a id="origin" class="accordion-section-title" href="#accordion-4">Select your Home City</a>
                                 <div id="accordion-4" class="accordion-section-content">
-                                    <select id="item1" onChange='passCookie("origin", this.value)'>
+                                    <select id="item1" onChange='passCookie("origin", this.value); reloaddiv(); '>
                                       <option value="select">Timbuktu</option>
                                     </select>
 
@@ -100,9 +102,10 @@
                                 <div id="accordion-5" class="accordion-section-content">
                                   <select id="item2" onChange='passCookie("destination", this.value)'>
                                     <option value="select">Select Destination</option>
-                                  </select>
+                                  
 
                                     <script>
+
                                     var origin = getCookie("origin");
                                     var valid_airports = [];
                                     for (var i = 0, l = airports.length; i < l; ++i) {
@@ -112,7 +115,7 @@
                                       document.getElementById('item2').innerHTML += '<option value="'+ valid_airports[i].city.toString() + '">' + valid_airports[i].city.toString() +'</option>';
                                   	};
                                     </script>
-
+								  </select>
                                 </div><!--end .accordion-section-content-->
                               </div><!--end .accordion-section-->
                             
