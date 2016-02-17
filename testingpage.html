@@ -24,7 +24,7 @@
     <script type="text/javascript" src="javascripts/accordion.js"></script>
     <script type="text/javascript" src="javascripts/javascript_commons.js"></script>
     <script type="text/javascript" src="javascripts/airport_list.js"></script>
-
+    
     <!--<script src="https://apis.google.com/js/platform.js" async defer></script>-->
     <meta name="google-signin-client_id" content="552278765316-h7q89rqnrpe9ro728nrk0d2hhe4lih1s.apps.googleusercontent.com">
     
@@ -103,7 +103,48 @@
                                 <a id="origin" class="accordion-section-title" href="#accordion-4">Select your Home City</a>
                                 <div id="accordion-4" class="accordion-section-content">
                                     <select id="item1" onChange='passCookie("origin", this.value)'>
-                                      <option value="select">Timbuktu</option>
+                                      <option id="home_airport" value="select">Timbuktu</option>
+                                            <script> 
+                                            function haversineDistance(lat1,lon1, lat2,lon2) {
+											  function toRad(x) {
+											    return x * Math.PI / 180;
+											  }
+
+											  var R = 6371; // km
+
+											  var x1 = lat2 - lat1;
+											  var dLat = toRad(x1);
+											  var x2 = lon2 - lon1;
+											  var dLon = toRad(x2)
+											  var a = Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+											    Math.cos(toRad(lat1)) * Math.cos(toRad(lat2)) *
+											    Math.sin(dLon / 2) * Math.sin(dLon / 2);
+											  var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+											  var d = R * c;
+											  return d;
+											} 
+                                            function closest_airport()  {
+											    var lat = 40;
+											    var lon = -74;
+											    var home_airport = '';
+											    var dist = 1000000;
+											    for (i = 0; i < airports.length; i++) {
+											      distance_from_airport = haversineDistance(airports[i].lat, airports[i].lon, lat, lon);
+											      if (distance_from_airport < dist) {
+											        dist = distance_from_airport;
+											        home_airport = airports[i].city
+											      }
+											    }
+											    if (home_airport != ''){
+											      console.log(home_airport)
+											      return home_airport
+											    }
+											    else {
+											      return false
+											    }
+  											}
+  											document.getElementById('home_airport').innerHTML = closest_airport() </script>
+
                                       <option value="San Francisco">San Francisco</option>
                                       <option value="Seattle">Seattle</option>
                                       <option value="New York City">New York City</option>
@@ -111,7 +152,6 @@
                                     </select>
                                 </div><!--end .accordion-section-content-->
                               </div><!--end .accordion-section-->
-
                               <p line-height= ".3em"> </p>
 
                               <div class="accordion-section">
