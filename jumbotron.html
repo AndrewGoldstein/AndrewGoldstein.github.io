@@ -40,34 +40,7 @@
           emailjs.init("user_P9ZRzstNVrsKAxg5cttib");
        })();
     </script>-->
-    <script language="JavaScript">
-            function onLoad() {
-              gapi.load('auth2', function() {
-                gapi.auth2.init();
-              });
-            }
-            function signOut() {
-                var auth2 = gapi.auth2.getAuthInstance();
-                auth2.signOut().then(function () {
-                  console.log('User signed out.');
-                });
-                window.location = "http://andrewgoldstein.github.io/login.html" ;
-            }
-              
-            function onSignIn(googleUser) {
-              try {
-                    console.log(googleUser);
-              }
-              catch(err) {
-                    window.location = "http://andrewgoldstein.github.io/login.html" ;
-              }
-            }
-                    var User = "current_user";
-                    User = getCookie("current_user");
-                    console.log(User);
-                    if (User == "current_user") 
-                      {window.location = "http://andrewgoldstein.github.io/login.html"}
-    </script>
+    
 
   </head>
 
@@ -102,16 +75,12 @@
                               <div class="accordion-section">
                                 <a id="origin" class="accordion-section-title" href="#accordion-4">Select your Home City</a>
                                 <div id="accordion-4" class="accordion-section-content">
-                                    <select id="item1" onChange='passCookie("origin", this.value)'>
+                                    <select id="item1" onChange='passCookie("origin", this.value); reloaddiv("item2"); '>
                                       <option value="select">Timbuktu</option>
-                                      <option value="San Francisco">San Francisco</option>
-                                      <option value="Seattle">Seattle</option>
-                                      <option value="New York City">New York City</option>
-                                      <option value="Boston">Boston</option>
                                     </select>
+                                    <script> populate_dropdown(airports, 'item1');  </script> 
                                 </div><!--end .accordion-section-content-->
                               </div><!--end .accordion-section-->
-
                               <p line-height= ".3em"> </p>
 
                               <div class="accordion-section">
@@ -119,12 +88,7 @@
                                 <div id="accordion-5" class="accordion-section-content">
                                   <select id="item2" onChange='passCookie("destination", this.value)'>
                                     <option value="select">Select Destination</option>
-                                    <option value="San Francisco">San Francisco</option>
-                                    <option value="Seattle">Seattle</option>
-                                    <option value="New York City">New York</option>
-                                    <option value="Boston">Boston</option>
-                                    <option value="Adventure">Surprise Me!</option>
-                                  </select>
+                  </select>
                                 </div><!--end .accordion-section-content-->
                               </div><!--end .accordion-section-->
                             
