@@ -40,26 +40,7 @@
           emailjs.init("user_P9ZRzstNVrsKAxg5cttib");
        })();
     </script>-->
-    <script language="JavaScript">
-			
-    		function populate_dropdown(ports, div){
-    			for (var i = 0, l = ports.length; i < l; ++i) {
-                                      document.getElementById(div).innerHTML += '<option value="'+ ports[i].city.toString() + '">' + ports[i].city.toString() +'</option>';
-                                  	};
-    		}
-
-			function reloaddiv(div) {
-			    var origin = getCookie("origin");
-			    document.getElementById(div).innerHTML = '<option value="select">Select Destination</option>' ;
-                var valid_airports = [];
-                for (var i = 0, l = airports.length; i < l; ++i) {
-                    if (origin != airports[i].city) {valid_airports.push(airports[i])}
-                };
-                populate_dropdown(valid_airports,div);
-                                    
-			}
-			
-    </script>
+    
 
   </head>
 
