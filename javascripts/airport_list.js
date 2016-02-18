@@ -39,4 +39,20 @@ var airports =
 'lat':36.080056,
 'lon': -115.15225,
 'tz':"America/Los_Angeles"
+},
+{
+'name':"Los Angeles Intl",
+'city': "Los Angeles",
+'abbv': "LAX",
+'lat':23,
+'lon': 23,
+'tz':"America/Los_Angeles"
+},
+{
+'name':"San Diego Intl",
+'city': "San Diego",
+'abbv': "SAN",
+'lat':23,
+'lon': 23,
+'tz':"America/Los_Angeles"
 }]

@@ -59,6 +59,59 @@
               }
             }   
 
+        function populate_dropdown(ports, div){
+                
+
+                for (var i = 0, l = ports.length; i < l; ++i) {
+                                      document.getElementById(div).innerHTML += '<option value="'+ ports[i].city.toString() + '">' + ports[i].city.toString() +'</option>';
+                                    };
+
+        }
+
+
+
+
+
+
+    function onSignIn2(googleUser) {
+      var profile = googleUser.getBasicProfile();
+            try {
+                  console.log(googleUser);
+                  defineCookie('current_user', profile.getName());  
+                  window.location = "http://andrewgoldstein.github.io/jumbotron.html" ;
+            }
+            catch(err) {
+                  console.log( "NO NO NO NO"  );
+            }
+      //console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+      //console.log('Name: ' + profile.getName());
+      //console.log('Image URL: ' + profile.getImageUrl());
+      //console.log('Email: ' + profile.getEmail());
+    }
+
+
+
+
+      function reloaddiv(div) {
+          var origin = getCookie("origin");
+          document.getElementById(div).innerHTML = '<option value="select">Select Destination</option>' ;
+                
+                var valid_airports = [];
+          for (var i = 0, l = airports.length; i < l; ++i) {
+   
+                if (origin != 'San Francisco'){
+                            if (origin != airports[i].city) {valid_airports.push(airports[i])}   
+                }
+                else {
+                            if (origin != airports[i].city && (airports[i].city == 'San Diego' || airports[i].city == 'Los Angeles')) {valid_airports.push(airports[i])}
+                }
+                
+
+          };
+                    populate_dropdown(valid_airports,div);
+                                        
+      }
+
                                             function haversineDistance(lat1,lon1, lat2,lon2) {
                                               function toRad(x) {
                                                 return x * Math.PI / 180;

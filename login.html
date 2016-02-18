@@ -35,34 +35,6 @@
 
     <!--<link rel="stylesheet" href="creditcard_demo.css">-->
 
-    <script>
-
-    function onSignIn(googleUser) {
-      var profile = googleUser.getBasicProfile();
-            try {
-                  console.log(googleUser);
-                  defineCookie('current_user', profile.getName());  
-                  window.location = "http://andrewgoldstein.github.io/jumbotron.html" ;
-            }
-            catch(err) {
-                  console.log( "NO NO NO NO"  );
-            }
-      //console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
-      //console.log('Name: ' + profile.getName());
-      //console.log('Image URL: ' + profile.getImageUrl());
-      //console.log('Email: ' + profile.getEmail());
-    }
-
-    function signOut() {
-      var auth2 = gapi.auth2.getAuthInstance();
-      auth2.signOut().then(function () {
-        console.log('User signed out.');
-      });
-    }
-
-  
-    </script>
-
   </head>
 
 
@@ -84,7 +56,7 @@
         <h2>What are you doing this weekend?</h2>
         <p class="lead">Take a new adventure, visit a friend, hop on a romantic getaway. Spontaneity has reached new heights. Search last minute flight deals for this coming weekend!</p>
         
-        <center><div class="g-signin2" data-onsuccess="onSignIn" href="jumbotron.html"></div></center>
+        <center><div class="g-signin2" data-onsuccess="onSignIn2" href="jumbotron.html"></div></center>
 
 
    
