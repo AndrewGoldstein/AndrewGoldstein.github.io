@@ -18,11 +18,11 @@
     player = new YT.Player('ytplayer', {
       height: '390',
       width: '640',
-      videoId: 'ij7oUPj-FJU',
+      videoId: '8ZI0EXg0asM',
       playerVars : {
              'autoplay': 1,
-             'start':462,
-             'end':470
+             'start':0,
+             'end':3
       },
        events: {
                 'onStateChange': onPlayerStateChange
@@ -37,10 +37,87 @@
 //var st = [4,4,4,7,7,8,8];
 //var end = [12,12,12,15,15,16,16];
 
+var X='M7lc1UVf-VE'
+var P=1
+var str = 
+[X,'H5QrW0g1Tpw',
+X,'rHAPinjg_og',
+X,'LybfPwCzs3g',
+X,'8vAOBQVjex0',
+X,'0KNIw-bgWtY',
+X,'0KNIw-bgWtY',
+X,'0KNIw-bgWtY',
+X,'0KNIw-bgWtY',
+X,'0KNIw-bgWtY',
+X,'0KNIw-bgWtY',
+X,'0KNIw-bgWtY',
+X,'aaeijHuG-UA',
+X,'M4T3bGDEyHY',
+X,'M4T3bGDEyHY',
+X,'0qSZIXjuJzI',
+X,'4kWjnsv2R3k',
+X,'tNYzYJMWGmU',
+X,'tNYzYJMWGmU',
+X,'HefxV1YuPgo',
+X,'HefxV1YuPgo'
+];
+/*
+0KNIw-bgWtY  6 14 60 73  98 106 119 122 142 147 165 171 192 202
+LybfPwCzs3g  67
+4kWjnsv2R3k 120 126
+0qSZIXjuJzI 24 32
+HefxV1YuPgo 7 10  19 24
+M4T3bGDEyHY 28 38 122 134
+aaeijHuG-UA 51 67
+tNYzYJMWGmU 120 150
+22 29
+*/
+var st = 
+[P,6,
+P,18,
+P,57,
+P,68,
+P,6,
+P,60,
+P,98,
+P,119,
+P,142,
+P,165,
+P,192,
+P,51,
+P,28,
+P,122,
+P,24,
+P,120,
+P,22,
+P,122,
+P,7,
+P,19
+];
 
-var str = ['M7lc1UVf-VE','H5QrW0g1Tpw','M7lc1UVf-VE','rHAPinjg_og','M7lc1UVf-VE','LybfPwCzs3g'];
-var st = [4,6,4,18,7,8,18];
-var end = [12,8,12,25,15,16,25];
+
+var end =
+[P,8,
+P,25,
+P,67,
+P,76,
+P,14,
+P,73,
+P,106,
+P,122,
+P,147,
+P,171,
+P,202,
+P,67,
+P,38,
+P,134,
+P,34,
+P,126,
+P,29,
+P,150,
+P,10,
+P,22
+];
 
     // when video ends
         function onPlayerStateChange(event) {  
